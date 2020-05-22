@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch</title>
+    <link href="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+    <script src="dropdown.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="left">
+                <div class="logo">
+                    <a class="logoOdnosnik" href="#" target="_self">
+                        <svg height="50" width="50" x="0" y="0">
+                            <g>
+                                <polygon id="fiolet" points="8,15 15,8 41,8 41,26 29,39 23,39 17,45 17,39 8,39" style="fill: #9147ff"/>
+                                <polygon id="biel" points="17,10 38,10 38,26 33,31 28,31 22,36 22,31 17,31" style="fill: white"/>
+                                <rect id="oko1" x="25" y="16" width="3" height="8" transform="translate(0 0)"style="fill: #9147ff">
+                                    <animate id="oczko1SX" restart="whenNotActive" dur="150ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="x" from="25" to="30" />
+                                    <animate id="oczko1SY" restart="whenNotActive" dur="150ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="y" from="16" to="11" />
+                                    <animate id="oczko1EX" restart="whenNotActive" dur="250ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="x" from="30" to="25" />
+                                    <animate id="oczko1EY" restart="whenNotActive" dur="250ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="y" from="11" to="16" />
+                                    <animate id="oczko1AnimuSY1" restart="whenNotActive" dur="75ms" begin="wykrywaczStart.begin + 150ms" fill="freeze" attributeName="y" from="11" to="13" />
+                                    <animate id="oczko1AnimuSH1" restart="whenNotActive" dur="75ms" begin="wykrywaczStart.begin + 150ms" fill="freeze" attributeName="height" from="8" to="2" />
+                                    <animate id="oczko1AnimuEY1" restart="whenNotActive" dur="100ms" begin="oczko1AnimuSY1.begin + 75ms" fill="freeze" attributeName="y" from="13" to="11" />
+                                    <animate id="oczko1AnimuEH1" restart="whenNotActive" dur="100ms" begin="oczko1AnimuSY1.begin + 75ms" fill="freeze" attributeName="height" from="2" to="8" />
+                                    <animate id="oczko1AnimuSY2" restart="whenNotActive" dur="75ms" begin="oczko1AnimuEY1.begin + 100ms" fill="freeze" attributeName="y" from="11" to="13" />
+                                    <animate id="oczko1AnimuSH2" restart="whenNotActive" dur="75ms" begin="oczko1AnimuEH1.begin + 100ms" fill="freeze" attributeName="height" from="8" to="2" />
+                                    <animate id="oczko1AnimuEY2" restart="whenNotActive" dur="100ms" begin="oczko1AnimuSY2.begin + 75ms" fill="freeze" attributeName="y" from="13" to="11" />
+                                    <animate id="oczko1AnimuEH2" restart="whenNotActive" dur="100ms" begin="oczko1AnimuSY2.begin + 75ms" fill="freeze" attributeName="height" from="2" to="8" />
+                                    
+                                </rect>
+                                <rect id="oko2" x="32" y="16" width="3" height="8" style="fill: #9147ff">
+                                    <animate id="oczko2SX" restart="whenNotActive" dur="150ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="x" from="32" to="37" />
+                                    <animate id="oczko2SY" restart="whenNotActive" dur="150ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="y" from="16" to="11" />
+                                    <animate id="oczko2EX" restart="whenNotActive" dur="250ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="x" from="37" to="32" />
+                                    <animate id="oczko2EY" restart="whenNotActive" dur="250ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="y" from="11" to="16" />
+                                    <animate id="oczko2AnimuSY1" restart="whenNotActive" dur="75ms" begin="wykrywaczStart.begin + 150ms" fill="freeze" attributeName="y" from="11" to="13" />
+                                    <animate id="oczko2AnimuSH1" restart="whenNotActive" dur="75ms" begin="wykrywaczStart.begin + 150ms" fill="freeze" attributeName="height" from="8" to="2" />
+                                    <animate id="oczko2AnimuEY1" restart="whenNotActive" dur="100ms" begin="oczko1AnimuSY1.begin + 75ms" fill="freeze" attributeName="y" from="13" to="11" />
+                                    <animate id="oczko2AnimuEH1" restart="whenNotActive" dur="100ms" begin="oczko1AnimuSY1.begin + 75ms" fill="freeze" attributeName="height" from="2" to="8" />
+                                    <animate id="oczko2AnimuSY2" restart="whenNotActive" dur="75ms" begin="oczko1AnimuEY1.begin + 100ms" fill="freeze" attributeName="y" from="11" to="13" />
+                                    <animate id="oczko2AnimuSH2" restart="whenNotActive" dur="75ms" begin="oczko1AnimuEH1.begin + 100ms" fill="freeze" attributeName="height" from="8" to="2" />
+                                    <animate id="oczko2AnimuEY2" restart="whenNotActive" dur="100ms" begin="oczko1AnimuSY2.begin + 75ms" fill="freeze" attributeName="y" from="13" to="11" />
+                                    <animate id="oczko2AnimuEH2" restart="whenNotActive" dur="100ms" begin="oczko1AnimuSY2.begin + 75ms" fill="freeze" attributeName="height" from="2" to="8" />
+                                </rect>
+                                <polygon id="wykrywacz" points="0,0 50,0 50,50, 0,50" style="fill:transparent"/>
+                            </g>
+                            <animate id="wykrywaczStart" restart="whenNotActive" dur="1ms" href="#wykrywacz" begin="mouseenter" />
+                            <animate id="wykrywaczEnd" restart="whenNotActive" dur="1ms" href="#wykrywacz" begin="mouseleave" />
+                            <animate id="fioletStart" href="#fiolet" restart="whenNotActive" dur="150ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="points" values="8,15, 15,8, 41,8, 41,26, 29,39, 23,39, 17,45, 17,39, 8,39;8,15, 20,3, 46,3, 46,21, 29,39, 23,39, 17,45, 17,39, 8,39"/>
+                            <animate id="bielStart" href="#biel" restart="whenNotActive" dur="150ms" begin="wykrywaczStart.begin" fill="freeze" attributeName="points" values="17,10, 38,10, 38,26, 33,31, 28,31, 22,36, 22,31, 17,31;22,5, 43,5, 43,21, 38,26, 33,26, 27,31, 27,26, 22,26" />
+                            <animate id="fioletEnd" href="#fiolet" dur="250ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="points" values="8,15, 20,3, 46,3, 46,21, 29,39, 23,39, 17,45, 17,39, 8,39;8,15, 15,8, 41,8, 41,26, 29,39, 23,39, 17,45, 17,39, 8,39"/>
+                            <animate id="bielEnd" href="#biel" dur="250ms" begin="wykrywaczEnd.begin" fill="freeze" attributeName="points" values="22,5, 43,5, 43,21, 38,26, 33,26, 27,31, 27,26, 22,26;17,10, 38,10, 38,26, 33,31, 28,31, 22,36, 22,31, 17,31" />
+                            
+                        </svg>     
+                    </a>
+                </div>
+                <div class="headerMenuButton" style="width: 62px;">
+                    <a href="#" target="_self" >
+                        <p style="color: #a970ff">Odkryj</p>
+                    </a>
+                    <div class="fioletowy-pasek"></div> 
+                </div>
+                <div class="headerMenuButton" style="width: 87px;"> 
+                    <a href="#" target="_self">   
+                        <p>Obserwowane</p>  
+                    </a>
+                </div>
+                <div class="headerMenuButton" style="width: 130px;">
+                    <a href="#" target="_self">   
+                        <p>Przeglądaj</p>  
+                    </a>
+                </div>
+                <div class="klikacz">
+                    <div class="guzik1">
+                        <div onmouseenter="myMoveFunction()" onmouseover="nad()" onmouseout="obok()" class="guzik2">
+                            <div id="d1" class="dymek">
+                                <span>Więcej</span>
+                            </div>
+                            <svg id="wiecej" x="0" y="0" width="30" height="30">
+                                <g>
+                                    <circle cx="15" cy="15" r="2" style="fill:#efeff1"/>
+                                    <circle cx="22" cy="15" r="2" style="fill:#efeff1"/>
+                                    <circle cx="8" cy="15" r="2" style="fill:#efeff1"/>
+                                </g>
+                            </svg>
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="dropdown"></button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <a href="">Blog</a>
+                                        <a href="">Deweloperzy</a>
+                                        <a href="">IGDB</a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="pasekWyszukiwania">
+                    <div class="pasekWyszukiwaniaSrodkowanie">
+                        <input class="input" type="text" name="wyszukiwanie" placeholder="Wyszukaj" autocapitalize="off" autocorrect="off" maxlength="150" spellcheck="off"/>
+                        <div class="znaczek-wyszukiwania">
+                            <svg x="0" y="0" width="38" height="38">
+                                <circle cx="19" cy="17" r="9" style="fill: #5a5a5c" />
+                                <circle cx="19" cy="17" r="6.5" style="fill: #29292c" />
+                                <polygon points="25,23 22,23 27,30 29,28 25,23" style="fill: #5a5a5c" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="klikacz">
+                    <div class="guzik1"> 
+                        <div class="guzik2">
+                            <svg x="0" y="0" width="30" height="30">
+                                <g>
+                                    <polygon points="7,20 7,9 11,14 15,9 19,14 23,9 23,20" style="fill: #efeff1;" />
+                                    <polygon points="8.5,18.5 8.5,14 11,16.5 15,11.5 19,16.5 21.5,14 21.5,18.5" style="fill: #18181a;" />
+                                </g>
+                            </svg>
+                            <div id="d2" class="dymek" style="width: 60px; left: 5px">
+                                <span style="font-size: 11.5px;">Łupy Prime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonButton">
+                    <div class="srodkowy">
+                        <button type="button" id="bitsy" class="guz">
+                            <div id="diamond">
+                                <svg width="20px" height="20px">
+                                    <path style="fill: #efeff1;" fill-rule="evenodd" clip-rule="evenodd" d="M3 12l7-10 7 10-7 6-7-6zm2.678-.338L10 5.487l4.322 6.173-.85.728L10 11l-3.473 1.39-.849-.729z"></path>
+                                </svg>
+                            </div>
+                            <div id="bits">
+                                <p style="font-size: 11.5"><b>Kup Bitsy</b></p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="klikacz" style="padding-left: 10px; padding-right: 10px;">
+                    <img class="image" alt="profilowe1" src="dziwuj.png">
+                </div>
+            </div>
+        </div>
+        <div class="column-left">
+            <div class="naglowek">
+                <div class="srodkowanieSpana">
+                    <span style="font-size: 13px;">OBSERWOWANE KANAŁY</span>
+                </div>
+                <div class="klikacz" style="height: 40px;">
+                    <div class="guzik1">
+                        <div class="guzik2">
+                            <div id="guzikXD">
+                                <svg x="0" y="0" width="30" height="30">
+                                    <g>
+                                        <rect x="21" y="8" width="2" height="14" style="fill: #efeff1" />
+                                        <polygon points="19,14 19,16 11,16 14,19 13,21 8,15 13,9 14,11 11,14" style="fill: #efeff1" />
+                                    </g>
+                                </svg>
+                                <div id="d3" class="dymek" style="width: 50px; height: 30px; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: center; top: 1px; left: 50px; right: 0px;">
+                                    <span style="font-size: 15px;">Zwiń</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="https://static-cdn.jtvnw.net/jtv_user_pictures/55949a07-d9e4-4b1e-84f7-6ec129f193ea-profile_image-70x70.png"/>
+                <div class="nazwa_nick">
+                    <span class="nick">IzakOOO</span>
+                    <span class="gra">VALORANT</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="4" style="fill: red" />
+                        </svg>
+                        2213
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="https://static-cdn.jtvnw.net/jtv_user_pictures/mandzio-profile_image-fc621f6c727d061b-70x70.png"/>
+                <div class="nazwa_nick">
+                    <span class="nick">Mandzio</span>
+                    <span class="gra">Sea of Thieves</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="4" style="fill: red" />
+                        </svg>
+                        1669
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="https://static-cdn.jtvnw.net/jtv_user_pictures/9541e9e6-9982-4233-8796-2191ff148db0-profile_image-70x70.png"/>
+                <div class="nazwa_nick">
+                    <span class="nick">Nervarien</span>
+                    <span class="gra">5 nowych filmów</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        Offline
+                    </span>
+                </div>
+            </div>
+            <div class="polecanyKanal">
+                <image class="image" alt="profilowe1" src="https://static-cdn.jtvnw.net/jtv_user_pictures/cd72d34b-e470-4329-9423-fabd4493c626-profile_image-70x70.png"/>
+                <div class="nazwa_nick">
+                    <span class="nick">ONSCREEN</span>
+                    <span class="gra">Crucible</span>
+                </div>
+                <div class="ogladajacy">
+                    <span>
+                        <svg x="0" y="0" width="10" height="10">
+                            <circle cx="5" cy="5" r="4" style="fill: red" />
+                        </svg>
+                        13 292
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="naglowek2">
+            <span>tak</span>
+        </div>
+        <div class="column-right">
+            <div class="karuzela">
+                <div id="jquery-script-menu">
+                    <div class="jquery-script-center">
+                        <div class="jquery-script-clear"></div>
+                    </div>
+                </div>
+                <div class="poster-main" id="carousel" data-setting='{
+                                                "width":1100,
+                                                "height":300,
+                                                "posterWidth":750,
+                                                "posterHeight":300,
+                                                "scale": 0.9,
+                                                "speed":800,
+                                                "autoPlay":false,
+                                                "delay":2000,
+                                                "verticalAlign":"middle"
+                                                }'> 
+                    <div class="poster-btn poster-prev-btn"></div> 
+                    <ul class="poster-list"> 
+                        <li class="poster-item"><a href="#">				
+                            <div class="wideoGlowne">
+                            <div class="wideo">
+                                    <iframe width="530" height="300" src="https://www.youtube.com/embed/TrcOfzmqCxA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                            </div>
+                            <div class="infoWideo">
+                                <div class="infoPadding">
+                                    <div class="zaslona"></div>
+                                    <div class="infoAutor">
+                                        <div style="width: 50px;height: 50px;">
+                                            <a class="image" href="#" target="_self" style="width: 50px;height: 50px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="https://yt3.ggpht.com/a/AATXAJw0RTPej0bkrdZQnTnno8kAJwAVQKoufPfw3g=s68-c-k-c0xffffffff-no-rj-mo" style="width: 50px;height: 50px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="pozostaleInfo">
+                                            <div>
+                                                <a id="underlineChange" class="nick2" href="#" target="_self" style="color: #a970ff;font-size: 13px;font-weight: bold;">OfflineTV</a>
+                                            </div>
+                                            <div>
+                                                <a id="underlineChange" class="gra" href="#" target="_self" style="font-size: 12px;font-weight: small; color: #a970ff">Rozmowy</a>
+                                            </div>
+                                            <div>
+                                                <span class="ileWidzow">114 0123 widzów</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self">
+                                                Angielski
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self" style="width: 60px;">
+                                                IRL
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="scianaTekstu">
+                                        <p>
+                                            We're Offline TV! We are a group of content creators who got our start in gaming. Now we live in a house together and make cool videos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a></li> 
+                        <li class="poster-item"><a href="#">
+                            <div class="wideoGlowne">
+                            <div class="wideo">
+                                <iframe width="530" height="300" src="https://www.youtube.com/embed/O3AqhJu2Ors" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                            </div>
+                            <div class="infoWideo">
+                                <div class="infoPadding">
+                                    <div class="zaslona"></div>
+                                    <div class="infoAutor">
+                                        <div style="width: 50px;height: 50px;">
+                                            <a class="image" href="#" target="_self" style="width: 50px;height: 50px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="https://yt3.ggpht.com/a/AATXAJzNSe29MXhMZ6vLZ0_HTMzJEhvNG6lzp1P84g=s68-c-k-c0xffffffff-no-rj-mo" style="width: 50px;height: 50px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="pozostaleInfo">
+                                            <div>
+                                                <a id="underlineChange" class="nick2" href="#" target="_self" style="color: #a970ff;font-size: 13px;font-weight: bold;">PolishPrezes</a>
+                                            </div>
+                                            <div>
+                                                <a id="underlineChange" class="gra" href="#" target="_self" style="font-size: 12px;font-weight: small; color: #a970ff">Rozmowy</a>
+                                            </div>
+                                            <div>
+                                                <span class="ileWidzow">12 widzów</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self">
+                                                Polski
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self" style="width: 60px;">
+                                                Zabawne
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="scianaTekstu">
+                                        <p>
+                                            Zaczynamy od porannej kawy, potem nowości i starocie... W sumie to wszystko co najlepsze!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div></a></li> 
+                        <li class="poster-item"><a href="#"><div class="wideoGlowne">
+                            <div class="wideo">
+                                <iframe width="530" height="300" src="https://www.youtube.com/embed/dHX4V1_LGnQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                            </div>
+                            <div class="infoWideo">
+                                <div class="infoPadding">
+                                    <div class="zaslona"></div>
+                                    <div class="infoAutor">
+                                        <div style="width: 50px;height: 50px;">
+                                            <a class="image" href="#" target="_self" style="width: 50px;height: 50px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="https://yt3.ggpht.com/a/AATXAJzlZzr16izsGHBCHIkO3H7n-UiHyZPCJFEPiQ=s68-c-k-c0xffffffff-no-rj-mo" style="width: 50px;height: 50px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="pozostaleInfo">
+                                            <div>
+                                                <a id="underlineChange" class="nick2" href="#" target="_self" style="color: #a970ff;font-size: 13px;font-weight: bold;">PewDiePie</a>
+                                            </div>
+                                            <div>
+                                                <a id="underlineChange" class="gra" href="#" target="_self" style="font-size: 12px;font-weight: small; color: #a970ff">Rozmowy</a>
+                                            </div>
+                                            <div>
+                                                <span class="ileWidzow">123 123 widzów</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self">
+                                                Angielski
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self" style="width: 105px;">
+                                                Powieść wizualna
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="scianaTekstu">
+                                        <p>
+                                            I make videos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div></a></li> 
+                        <li class="poster-item"><a href="#"><div class="wideoGlowne">
+                            <div class="wideo">
+                                <iframe width="530" height="300" src="https://www.youtube.com/embed/tnpq2YjMr84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                            </div>
+                            <div class="infoWideo">
+                                <div class="infoPadding">
+                                    <div class="zaslona"></div>
+                                    <div class="infoAutor">
+                                        <div style="width: 50px;height: 50px;">
+                                            <a class="image" href="#" target="_self" style="width: 50px;height: 50px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="//yt3.ggpht.com/a-/AOh14GhO1_VohhUywSBTiqRex416sevvwygOPzLwVWhr=s88-c-k-c0xffffffff-no-nd-rj" style="width: 50px;height: 50px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="pozostaleInfo">
+                                            <div>
+                                                <a id="underlineChange" class="nick2" href="#" target="_self" style="color: #a970ff;font-size: 13px;font-weight: bold;">Alfons</a>
+                                            </div>
+                                            <div>
+                                                <a id="underlineChange" class="gra" href="#" target="_self" style="font-size: 12px;font-weight: small; color: #a970ff">Muzyka</a>
+                                            </div>
+                                            <div>
+                                                <span class="ileWidzow">666 widzów</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self">
+                                                Angielski
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self" style="width: 60px;">
+                                                Dobry bit
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="scianaTekstu">
+                                        <p>
+                                            My name is Alfons.
+                                            Here you can listen to all my songs: from old goodies like Streets Ahead 2015, Glitch 2015, Ganjaman to new stuff like Cool Kids, Dracula, Don Dada and Leyla. 
+                                            I also hope to expand the genre of EDM and Melbourne Bounce Music, which I hope you can hear on "Leyla". That song is probably my most un-Alfons song ever. 
+
+                                            If you like Spinnin Records, you will love me. 
+                                            If you like to Melbourne Bounce, you will love me.
+                                            If you like to Bass, you will love me. 
+                                            If you like EDM, you will love me. 
+                                            If you like hot dogs, you will love me. 
+
+                                            If you like videos from these guys, you will probably like my content aswell: Bounce Music, Bounce United, Melbourne Bounce, LUM!X, Dopedrop, Will Sparks, Deorro, AronChupa, Im an albatraz, Anis Don Demina, Avicii, Swedish House Mafia, KSHMR, Vigiland, Mike Emilio, B3nte, EDM, Alan Walker,, Spinnin Records, Timmy Trumpet, Ganjaman, Basta Boi, Bass boosted and Donald Trump's grandmother.
+
+                                            I'm your friendly neighbor,
+
+                                            /Big Alf
+                                        </p>
+                                    </div>
+                                </div>
+                            </div></a></li> 
+                        <li class="poster-item"><a href="#"><div class="wideoGlowne">
+                            <div class="wideo">
+                                <iframe width="530" height="300" src="https://www.youtube.com/embed/aJP_GaD8UEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                            </div>
+                            <div class="infoWideo">
+                                <div class="infoPadding">
+                                    <div class="zaslona"></div>
+                                    <div class="infoAutor">
+                                        <div style="width: 50px;height: 50px;">
+                                            <a class="image" href="#" target="_self" style="width: 50px;height: 50px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="https://yt3.ggpht.com/a/AATXAJyG8eza0R9f9SB5PR3mAqSVojnXRa1TlLgt2g=s88-c-k-c0xffffffff-no-rj-mo" style="width: 50px;height: 50px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="pozostaleInfo">
+                                            <div>
+                                                <a id="underlineChange" class="nick2" href="#" target="_self" style="color: #a970ff;font-size: 13px;font-weight: bold;">MagikarpUsedFly</a>
+                                            </div>
+                                            <div>
+                                                <a id="underlineChange" class="gra" href="#" target="_self" style="font-size: 12px;font-weight: small; color: #a970ff">Rozmowy</a>
+                                            </div>
+                                            <div>
+                                                <span class="ileWidzow">428 931 widzów</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self">
+                                                Angielski
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria">
+                                            <a class="kategoria" href="#" target="_self" style="width: 120px;">
+                                                League of Legends
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="scianaTekstu">
+                                        <p>
+                                            This is a gaming channel. Hello I hope you like video games.
+
+                                            New videos every week
+                                            
+                                            Get your merch here: https://shop.bbtv.com/collections/magikarpusedfly                                        </p>
+                                    </div>
+                                </div>
+                            </div></a></li> 
+                    </ul> 
+                    <div class="poster-btn poster-next-btn"></div> 
+                </div> 
+                <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+                <script src="Carousel.js"></script> 
+                <script>
+                    $(function(){
+                        Carousel.init($("#carousel"));
+                        $("#carousel").init();
+                    });
+                </script>
+                <script type="text/javascript">
+                    var _gaq = _gaq || [];
+                    _gaq.push(['_setAccount', 'UA-36251023-1']);
+                    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+                    _gaq.push(['_trackPageview']);
+                    
+                    (function() {
+                        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                    })();
+                    
+                </script>
+            </div>
+            <div class="contentWlasciwy">
+                <div class="polecane">
+                    <div class="container">
+                        <div class="tytul">Kanały na żywo, które mogą Ci się spodobać</div>
+                        <div class="elementy">
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdj_rec" alt="nie działa" src="https://static-cdn.jtvnw.net/previews-ttv/live_user_lotharhs-440x248.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow"><span>865 widzów</span></div>
+                                    </a>
+                                </div>
+                                <div class="opis">
+                                    <div class="opis2">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Siwy z Twitcha - Gry z subami I ranked, !tiktok !youtube hajlajty</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="nick2" href="#" target="_self">LotharHS</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">VALORANT</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    polski
+                                                </a>
+                                            </div>
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self" style="width: 100px;">
+                                                    Dropy włączone
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdj_rec" alt="nie działa" src="https://static-cdn.jtvnw.net/previews-ttv/live_user_gaules-440x248.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow"><span>4507 widzów</span></div>
+                                    </a>
+                                </div>
+                                <div class="opis">
+                                    <div class="opis2">
+                                        <div style="overflow: hidden;">
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Rerun: DreamHack Masters 2020 Dia 1 Portões abrem 8am #Gaurentena Dia 66</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="nick2" href="#" target="_self">gaules</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Counter-Strike: Global Offensive</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self" style="width: 92px;">
+                                                    portugalski
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdj_rec" alt="nie działa" src="https://static-cdn.jtvnw.net/previews-ttv/live_user_diables-440x248.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow" style="width: 80px"><span>164 widzów</span></div>
+                                    </a>      
+                                </div>
+                                <div class="opis">
+                                    <div class="opis2">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">urf z widzami " InT3nsivee to Idiota Kappa"</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="nick2" href="#" target="_self">Diables</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">League of Legends</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    angielski
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdj_rec" alt="nie działa" src="https://static-cdn.jtvnw.net/previews-ttv/live_user_sfory-440x248.jpg"></image>
+                                        <div class="banerNaZywo"><span>NA ŻYWO</span></div>
+                                        <div class="iloscWidzow" style="width: 80px"><span>3535 widzów</span></div>
+                                    </a>
+                                </div>
+                                <div class="opis">
+                                    <div class="opis2">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">24/7 DROPS - Бесконечные Дропсы ► Я не киберспортсмен</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="nick2" href="#" target="_self">Sfory</a>
+                                        </div>
+                                        <div>
+                                            <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">VALORANT</a>
+                                        </div>
+                                        <div class="kategorie">
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self">
+                                                    rosyjski
+                                                </a>
+                                            </div>
+                                            <div class="przedKategoria">
+                                                <a class="kategoria" href="#" target="_self" style="width: 100px;">
+                                                    Dropy włączone
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ukryte">
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                            <div class="showMore">
+                                <button type="button" class="buttonShowMore">
+                                    <div class="zawartoscShowMore">
+                                        <span>Pokaż więcej</span>
+                                        <svg width="20px" height="20px">
+                                            <polygon points="10,15 3,7 6,7 10,12 14,7 17,7" style="fill: #a970ff"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="polecane" style="height: 350px;">
+                    <div class="container" style="height: 330px;">
+                        <div class="tytul"> <a href="#" target="_self">Kategorie</a>, które mogą Ci się spodobać</div>
+                        <div class="elementy" style="height: 270px;">
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdj_rec" alt="aj karamba" src="https://static-cdn.jtvnw.net/ttv-boxart/VALORANT-188x250.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis" style="width: 145px;height: 96px;flex-direction: column;">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">VALORANT</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="nick2" href="#" target="_self">107 165 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdj_rec" alt="aj karamba" src="https://static-cdn.jtvnw.net/ttv-boxart/Just%20Chatting-188x250.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Rozmowy</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="nick2" href="#" target="_self">159 360 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                IRL
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdj_rec" alt="aj karamba" src="https://static-cdn.jtvnw.net/ttv-boxart/./Counter-Strike:%20Global%20Offensive-188x250.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Counter-Strike:Gl...</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="nick2" href="#" target="_self">39 567 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdj_rec" alt="aj karamba" src="https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-188x250.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">League of Legends</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="nick2" href="#" target="_self">155 703 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 50px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 50px;">
+                                                MOBA
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdj_rec" alt="aj karamba" src="https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-188x250.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Fortnite</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="nick2" href="#" target="_self">97 878 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 75px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 75px;">
+                                                Strzelanka
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdj_rec" alt="aj karamba" src="https://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-188x250.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Grand Theft Auto V</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="nick2" href="#" target="_self">57 329 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdj_rec" alt="aj karamba" src="https://static-cdn.jtvnw.net/ttv-boxart/Minecraft-188x250.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Minecraft</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="nick2" href="#" target="_self">20 608 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 105px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 105px;">
+                                                Gra przygodowa
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element" style="height: 270px; width: 145px;">
+                                <div class="img" style="width: 145px; height: 194px;">
+                                    <a class="elementOdnosnik" href="#" target="_self" style="width: 145px;height: 194px;">
+                                        <image class="zdj_rec" alt="aj karamba" src="https://static-cdn.jtvnw.net/ttv-boxart/./Call%20of%20Duty:%20Modern%20Warfare-188x250.jpg" style="width: 145px; height: 194px;"></image>
+                                    </a>
+                                </div>
+                                <div class="katOpis">
+                                    <div>
+                                        <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: 500;">Call of Duty: Mode...</a>
+                                    </div>
+                                    <div class="katIloscOgl">
+                                        <a id="colorChange" class="nick2" href="#" target="_self">50 612 widzów</a>
+                                    </div>
+                                    <div class="kategorie">
+                                        <div class="przedKategoria" style="width: 40px;">
+                                            <a class="kategoria" href="#" target="_self" style="width: 40px;">
+                                                FPS
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ukryte">
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                            <div class="showMore">
+                                <button type="button" class="buttonShowMore">
+                                    <div class="zawartoscShowMore">
+                                        <span>Pokaż więcej</span>
+                                        <svg width="20px" height="20px">
+                                            <polygon points="10,15 3,7 6,7 10,12 14,7 17,7" style="fill: #a970ff"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="polecane">
+                    <div class="container">
+                        <div class="tytul"><a href="#" target="_self">Muzyka</a>, która może Ci się spodobać</div>
+                        <div class="elementy">
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdj_rec" alt="aj karamba" src="zdj-muzyka1.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka1.mp3" type="audio/mpeg"/>
+                                            ###
+                                        </audio>
+                                    </div>
+                                    <div class="opis2" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">ZSŁ EP</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="nick2" href="#" target="_self">DRACO</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdj_rec" alt="aj karamba" src="zdj-muzyka2.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka2.mp3" type="audio/mpeg"/>
+                                            ###
+                                        </audio>
+                                    </div>
+                                    <div class="opis2" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Układanka</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="nick2" href="#" target="_self">Jan-rapowanie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdj_rec" alt="aj karamba" src="zdj-muzyka3.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka3.mp3" type="audio/mpeg"/>
+                                            ###
+                                        </audio>
+                                    </div>
+                                    <div class="opis2" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Przebój nocy</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="nick2" href="#" target="_self">PR0BL3M</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="element">
+                                <div class="img">
+                                    <a class="elementOdnosnik" href="#" target="_self">
+                                        <image class="zdj_rec" alt="aj karamba" src="zdj-muzyka4.jpg"></image>
+                                    </a>
+                                </div>
+                                <div class="opis" style="margin: 0;height: 95px;flex-direction: column;">
+                                    <div class="audio">
+                                        <audio controls>
+                                            <source src="muzyka4.mp3" type="audio/mpeg"/>
+                                            ###
+                                        </audio>
+                                    </div>
+                                    <div class="opis2" style="width: 293px;height: 32px;">
+                                        <div>
+                                            <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Come and get your love</a>
+                                        </div>
+                                        <div class="ukladImie">
+                                            <a id="colorChange" class="nick2" href="#" target="_self">Redbone</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ukryte">
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                            <div class="showMore">
+                                <button type="button" class="buttonShowMore">
+                                    <div class="zawartoscShowMore">
+                                        <span>Pokaż więcej</span>
+                                        <svg width="20px" height="20px">
+                                            <polygon points="10,15 3,7 6,7 10,12 14,7 17,7" style="fill: #a970ff"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="pasekContainer">
+                                <div class="pasek"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentWlasciwy">
+                    <div class="polecane">
+                        <div class="container">
+                            <div class="tytul">Klipy, które mogą ci się spodobać</div>
+                            <div class="elementy">
+                                <div class="element">
+                                    <div class="img">
+                                        <a class="elementOdnosnik" href="#" target="_self">
+                                            <image class="zdj_rec" alt="nie działa" src="https://clips-media-assets2.twitch.tv/AT-cm%7C712186153-preview-480x272.jpg"></image>
+                                            <div class="czas"><span>0:59</span></div>
+                                            <div class="iloscWidzow"><span>865 wyświetleń</span></div>
+                                            <div class="iloscczasu"><span>5 dni temu</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="opis">
+                                        <div class="ukladIkona">
+                                            <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="https://static-cdn.jtvnw.net/jtv_user_pictures/anomaly-profile_image-0be1a6abbc7a9f45-50x50.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="opis2">
+                                            <div>
+                                                <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">cheater detected</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="nick2" href="#" target="_self">Anomaly</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Klip użytkownika tazzy88</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element">
+                                    <div class="img">
+                                        <a class="elementOdnosnik" href="#" target="_self">
+                                            <image class="zdj_rec" alt="nie działa" src="https://clips-media-assets2.twitch.tv/AT-cm%7C716063448-preview-480x272.jpg"></image>
+                                            <div class="czas"><span>0:24</span></div>
+                                            <div class="iloscWidzow"><span>53 wyświetleń</span></div>
+                                            <div class="iloscczasu" style="width: 90px;"><span>przedwczoraj</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="opis">
+                                        <div class="ukladIkona">
+                                            <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="https://static-cdn.jtvnw.net/jtv_user_pictures/anomaly-profile_image-0be1a6abbc7a9f45-50x50.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="opis2">
+                                            <div>
+                                                <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">Mrbeats</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="nick2" href="#" target="_self">Anomaly</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Klip użytkownika skagers</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element">
+                                    <div class="img">
+                                        <a class="elementOdnosnik" href="#" target="_self">
+                                            <image class="zdj_rec" alt="nie działa" src="https://clips-media-assets2.twitch.tv/AT-cm%7C709642209-preview-480x272.jpg"></image>
+                                            <div class="czas"><span>0:20</span></div>
+                                            <div class="iloscWidzow"><span>415 wyświetleń</span></div>
+                                            <div class="iloscczasu"><span>7 dni temu</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="opis">
+                                        <div class="ukladIkona">
+                                            <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="https://static-cdn.jtvnw.net/jtv_user_pictures/anomaly-profile_image-0be1a6abbc7a9f45-50x50.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="opis2">
+                                            <div>
+                                                <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">who is dankus memecus</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="nick2" href="#" target="_self">Anomaly</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Klip użytkownika dankus_memecus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element">
+                                    <div class="img">
+                                        <a class="elementOdnosnik" href="#" target="_self">
+                                            <image class="zdj_rec" alt="nie działa" src="https://clips-media-assets2.twitch.tv/AT-cm%7C711855775-preview-480x272.jpg"></image>
+                                            <div class="czas"><span>0:59</span></div>
+                                            <div class="iloscWidzow"><span>94 wyświetleń</span></div>
+                                            <div class="iloscczasu"><span>5 dni temu</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="opis">
+                                        <div class="ukladIkona">
+                                            <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="https://static-cdn.jtvnw.net/jtv_user_pictures/anomaly-profile_image-0be1a6abbc7a9f45-50x50.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="opis2">
+                                            <div>
+                                                <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">bruh</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="nick2" href="#" target="_self">Anomaly</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Klip użytkownika dengowo</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element">
+                                    <div class="img">
+                                        <a class="elementOdnosnik" href="#" target="_self">
+                                            <image class="zdj_rec" alt="nie działa" src="https://clips-media-assets2.twitch.tv/1593420481-offset-47758-preview-480x272.jpg"></image>
+                                            <div class="czas"><span>0:47</span></div>
+                                            <div class="iloscWidzow"><span>47 wyświetleń</span></div>
+                                            <div class="iloscczasu"><span>6 dni temu</span></div>
+                                        </a>
+                                    </div>
+                                    <div class="opis">
+                                        <div class="ukladIkona">
+                                            <a class="image" href="#" target="_self" style="width: 40px;height: 40px;margin: 0;display: inline-block">
+                                                <image class="image" alt="profilowe1" src="https://static-cdn.jtvnw.net/jtv_user_pictures/anomaly-profile_image-0be1a6abbc7a9f45-50x50.png" style="width: 40px;height: 40px;margin: 0;"/>
+                                            </a>
+                                        </div>
+                                        <div class="opis2">
+                                            <div>
+                                                <a id="colorChange" class="tytul" href="#" target="_self" style="text-decoration: none;font-size: 14px;font-weight: bold;">fart hahah</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="nick2" href="#" target="_self">Anomaly</a>
+                                            </div>
+                                            <div>
+                                                <a id="colorChange" class="gra" href="#" target="_self" style="text-decoration: none;font-size: 12px;font-weight: small;">Klip użytkownika rapacen</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ukryte">
+                                <div class="pasekContainer">
+                                    <div class="pasek"></div>
+                                </div>
+                                <div class="showMore">
+                                    <button type="button" class="buttonShowMore">
+                                        <div class="zawartoscShowMore">
+                                            <span>Pokaż więcej</span>
+                                            <svg width="20px" height="20px">
+                                                <polygon points="10,15 3,7 6,7 10,12 14,7 17,7" style="fill: #a970ff"/>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="pasekContainer">
+                                    <div class="pasek"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
