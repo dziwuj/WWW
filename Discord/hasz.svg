@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="HtmlToSvg.svg"
+   id="svg48"
+   version="1.2"
+   height="18"
+   width="20">
+  <metadata
+     id="metadata52">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="svg48"
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="1"
+     inkscape:cy="25.000064"
+     inkscape:cx="25.000064"
+     inkscape:zoom="16.599958"
+     height="20mm"
+     units="px"
+     showgrid="false"
+     id="namedview50"
+     inkscape:window-height="1144"
+     inkscape:window-width="1829"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <desc
+     id="desc2">Created by HiQPdf</desc>
+  <defs
+     id="defs4" />
+  <g
+     transform="matrix(1.0184694,0,0,1,-10.281419,-11)"
+     id="g46"
+     stroke-linejoin="bevel"
+     stroke-linecap="square"
+     fill-rule="evenodd"
+     stroke-width="1"
+     stroke="#000000"
+     fill="none">
+    <g
+       id="g6"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g8"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g10"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g12"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g14"
+       transform="translate(8,8)"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g18"
+       transform="translate(8,8)"
+       stroke="none"
+       fill-opacity="1"
+       fill="#686868">
+      <path
+         id="path16"
+         d="M 5.88657,21 C 5.57547,21 5.3399,20.7189 5.39427,20.4126 L 6.00001,17 H 2.59511 C 2.28449,17 2.04905,16.7198 2.10259,16.4138 l 0.175,-1 C 2.31946,15.1746 2.52722,15 2.77011,15 h 3.5799 l 1.06,-6 H 4.00511 C 3.69449,9 3.45905,8.71977 3.51259,8.41381 l 0.175,-1 C 3.72946,7.17456 3.93722,7 4.18011,7 h 3.5799 L 8.39677,3.41262 C 8.43914,3.17391 8.64664,3 8.88907,3 H 9.87344 C 10.1845,3 10.4201,3.28107 10.3657,3.58738 L 9.76001,7 H 15.76 L 16.3968,3.41262 C 16.4391,3.17391 16.6466,3 16.8891,3 h 0.9843 c 0.3111,0 0.5467,0.28107 0.4923,0.58738 L 17.76,7 h 3.4049 c 0.3106,0 0.5461,0.28023 0.4925,0.58619 l -0.175,1 C 21.4406,8.82544 21.2328,9 20.9899,9 H 17.41 l -1.06,6 h 3.4049 c 0.3106,0 0.5461,0.2802 0.4925,0.5862 l -0.175,1 C 20.0306,16.8254 19.8228,17 19.5799,17 H 16 l -0.6368,3.5874 C 15.3209,20.8261 15.1134,21 14.8709,21 h -0.9843 c -0.3111,0 -0.5467,-0.2811 -0.4923,-0.5874 L 14,17 H 8.00001 L 7.36325,20.5874 C 7.32088,20.8261 7.11337,21 6.87094,21 H 5.88657 m 3.52388,-12 -1.06,6 h 5.99995 l 1.06,-6 H 9.41045"
+         fill-rule="evenodd"
+         vector-effect="none" />
+    </g>
+    <g
+       id="g20"
+       transform="translate(8,8)"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g22"
+       transform="translate(8,8)"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g24"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g26"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g28"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g30"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g32"
+       transform="translate(8,8)"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g34"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g36"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g38"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g40"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g42"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+    <g
+       id="g44"
+       stroke-miterlimit="2"
+       stroke-linejoin="miter"
+       stroke-linecap="square"
+       stroke-width="1"
+       stroke-opacity="1"
+       stroke="#000000"
+       fill-opacity="1"
+       fill="#000000" />
+  </g>
+</svg>
