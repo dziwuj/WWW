@@ -1,0 +1,46 @@
+@keyframes input {
+  from {
+    background: #3A3A3D;
+    border: none;
+  }
+  to {
+    background: black;
+    box-shadow: 0px 0px 0px 2px #a970ff inset;
+  }
+}
+@keyframes output {
+  from {
+    background: black;
+    box-shadow: 0px 0px 0px 2px #a970ff inset;
+  }
+  to {
+    background: #3A3A3D;
+    border: none;
+  }
+}
+#underlineChange:hover {
+  text-decoration: underline;
+}
+#colorChange:hover {
+  color: #a970ff;
+}
+@keyframes przesuniecie {
+  from {
+    box-shadow: 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff;
+    transform: translate(0px, 0px);
+  }
+  to {
+    box-shadow: -1px 1px #e941ff, -2px 2px #e941ff, -3px 3px #e941ff, -4px 4px #e941ff, -5px 5px #e941ff, -6px 6px #e941ff, -7px 7px #e941ff;
+    transform: translate(7px, -7px);
+  }
+}
+@keyframes powrot {
+  from {
+    box-shadow: -1px 1px #e941ff, -2px 2px #e941ff, -3px 3px #e941ff, -4px 4px #e941ff, -5px 5px #e941ff, -6px 6px #e941ff, -7px 7px #e941ff;
+    transform: translate(7px, -7px);
+  }
+  to {
+    box-shadow: 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff, 0 0 #e941ff;
+    transform: translate(0px, 0px);
+  }
+}
