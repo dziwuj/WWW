@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+    <script src="time.js"></script>
+    <title>Polskie forum wsparcian dla PHP</title>
+</head>
+<body>
+    <div class="main_page_container">
+
+        <div class="site_welcome_first" div>
+            <img class="logo" src="php.bb logo.png">
+            <h1> Polskie forum wsparcia dla phpBB</h1>
+            <div class="szukaj_container">
+                <input name="keywords" id="keywords" type="search" maxlength="128" title="Szukaj wg słów kluczowych" class="inputbox search tiny" size="20" value="" placeholder="Szukaj…">
+                <div class="graficzka"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cog" class="svg-inline--fa fa-cog fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="gray" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg></div>
+                <div class="graficzka"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="gray" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></div>
+            </div>
+        </div>
+        <!-- skońćza to / -->
+        <div class="informations">
+
+            <div class="over_line">
+                <div class="line_item">
+                    <svg viewBox="0 0 100 80" width="40" height="40">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                    <div div class="ala" style="padding-top: 3px;">
+                      <p class="papaj">Więcej...</p>
+                    </div>
+            </div>
+            <div class="line_item">
+                <svg  x="0px" y="0px"viewBox="0 0 512 512" >
+
+			<circle cx="256" cy="378.5" r="25"/>
+			<path d="M256,0C114.516,0,0,114.497,0,256c0,141.484,114.497,256,256,256c141.484,0,256-114.497,256-256
+				C512,114.516,397.503,0,256,0z M256,472c-119.377,0-216-96.607-216-216c0-119.377,96.607-216,216-216
+				c119.377,0,216,96.607,216,216C472,375.377,375.393,472,256,472z"/>
+			<path d="M256,128.5c-44.112,0-80,35.888-80,80c0,11.046,8.954,20,20,20s20-8.954,20-20c0-22.056,17.944-40,40-40
+				c22.056,0,40,17.944,40,40c0,22.056-17.944,40-40,40c-11.046,0-20,8.954-20,20v50c0,11.046,8.954,20,20,20
+                c11.046,0,20-8.954,20-20v-32.531c34.466-8.903,60-40.26,60-77.469C336,164.388,300.112,128.5,256,128.5z"/>
+            </svg>
+            <div div class="ala" style="padding-top: 3px;">
+            <p class="papaj">FAQ</p>
+            </div>
+            </div>
+            <div class="second_part">
+                <div class="line_item_two">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 348.882 348.882" style="enable-background:new 0 0 348.882 348.882;" xml:space="preserve">
+               
+                   <path d="M333.988,11.758l-0.42-0.383C325.538,4.04,315.129,0,304.258,0c-12.187,0-23.888,5.159-32.104,14.153L116.803,184.231
+                       c-1.416,1.55-2.49,3.379-3.154,5.37l-18.267,54.762c-2.112,6.331-1.052,13.333,2.835,18.729c3.918,5.438,10.23,8.685,16.886,8.685
+                       c0,0,0.001,0,0.001,0c2.879,0,5.693-0.592,8.362-1.76l52.89-23.138c1.923-0.841,3.648-2.076,5.063-3.626L336.771,73.176
+                       C352.937,55.479,351.69,27.929,333.988,11.758z M130.381,234.247l10.719-32.134l0.904-0.99l20.316,18.556l-0.904,0.99
+                       L130.381,234.247z M314.621,52.943L182.553,197.53l-20.316-18.556L294.305,34.386c2.583-2.828,6.118-4.386,9.954-4.386
+                       c3.365,0,6.588,1.252,9.082,3.53l0.419,0.383C319.244,38.922,319.63,47.459,314.621,52.943z"/>
+                   <path d="M303.85,138.388c-8.284,0-15,6.716-15,15v127.347c0,21.034-17.113,38.147-38.147,38.147H68.904
+                       c-21.035,0-38.147-17.113-38.147-38.147V100.413c0-21.034,17.113-38.147,38.147-38.147h131.587c8.284,0,15-6.716,15-15
+                       s-6.716-15-15-15H68.904c-37.577,0-68.147,30.571-68.147,68.147v180.321c0,37.576,30.571,68.147,68.147,68.147h181.798
+                       c37.576,0,68.147-30.571,68.147-68.147V153.388C318.85,145.104,312.134,138.388,303.85,138.388z"/>
+                    </svg>
+                    <div div class="ala">
+                        <p class="papaj">Zarejestruj się</p>
+                    </div>
+    
+                </div>
+                  <div class="line_item_two">
+                    <svg id="Capa_2" viewBox="0 0 511.996 511.996">
+    
+                        <path d="M349.85,62.196c-10.797-4.717-23.373,0.212-28.09,11.009c-4.717,10.797,0.212,23.373,11.009,28.09
+                            c69.412,30.324,115.228,98.977,115.228,176.035c0,106.034-85.972,192-192,192c-106.042,0-192-85.958-192-192
+                            c0-77.041,45.8-145.694,115.192-176.038c10.795-4.72,15.72-17.298,10.999-28.093c-4.72-10.795-17.298-15.72-28.093-10.999
+                            C77.306,99.275,21.331,183.181,21.331,277.329c0,129.606,105.061,234.667,234.667,234.667
+                            c129.592,0,234.667-105.068,234.667-234.667C490.665,183.159,434.667,99.249,349.85,62.196z"/>
+                        <path d="M255.989,234.667c11.782,0,21.333-9.551,21.333-21.333v-192C277.323,9.551,267.771,0,255.989,0
+                            c-11.782,0-21.333,9.551-21.333,21.333v192C234.656,225.115,244.207,234.667,255.989,234.667z"/>
+            
+                    </svg>
+                    <div div class="ala">
+                    <p class="papaj">Zaloguj się</p>
+                    </div>
+                  </div>
+
+
+            </div>
+            </div>
+            <div class="line"></div>
+            <div class="under_line">
+            <div class="line_item" >
+                <svg class="byczq"  viewBox="0 0 576 512"  >
+
+                    <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+        
+                </svg>
+                <div class="ala" style="padding-top: 3px;">
+                    <p class="papaj" style="font-weight: bold;">Strona Główna</p>
+                </div>
+            </div>
+                
+               
+            </div>
+
+
+        </div>
+        <!-- skończ to -->
+        <div class="pink_div">
+            <p>Polski pakiet językowy dla phpBB 3.2.4</p>
+        </div>
+        <p class="time_laps_scrpit" id="time_maker">Dziś jest </p>
+       
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- paragraf 1 -->
+        <div class="whole_paragraph">
+
+            <div class="Info_box_frame">
+
+                <p class="ja">OGÓLNE</p>
+                <div class="back">
+                    <div class="nosz"><p class="first_name">TEMATY </p></div>
+                    <div class="nosz"><p class="first_name">POSTY </p></div>
+                    <div class="nosz"><p class="first_name">OSTATNI POST</p></div>
+                </div>
+    
+            </div>
+                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                <div class="one_content_line">
+                    <img src="ikona tabeli.png">
+                    <div class="parttwo">
+                        <h4>Opinie</h4>
+                        <p>Sugestie i uwagi na temat działalności i funkcjonowania systemu</p>
+                    </div>
+                    <div class="right_container">
+                        <p id="pjeden">68</p>
+                        <p id="pdwa">730</p>
+                        <div class="reszta">
+                     
+                            <h4 id="hcztjeden">Re: Chmody</h4>
+                            <h6>autor: <a>lutek22</a></h6>
+                            <h6 id="hcztdwa">06 maja 2020, 18:54</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- KONIEC DIVA  -->
+                                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                                <div class="one_content_line">
+                                    <img src="ikona tabeli 2.png">
+                                    <div class="parttwo">
+                                        <h4>Polski pakiet językowy</h4>
+                                        <p>Wszystko o polskim tłumaczeniu do poszczególnych wydań phpBB.</p>
+                                        <p>Subfora: <a>[3.2.x]</a> <a>[3.1.x]</a> <a>[3.0.x]</a> </p>
+                                    </div>
+                                    <div class="right_container">
+                                        <p id="pjeden">66</p>
+                                        <p id="pdwa">353</p>
+                                        <div class="reszta">
+                                     
+                                            <h4 id="hcztjeden">Polski pakiet językowy dla ph...</h4>
+                                            <h6>autor: <a style="color: green">vader</a></h6>
+                                            <h6 id="hcztdwa">11 marca 2020 10:11</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- KONIEC DIVA  -->
+    
+
+
+        </div>
+        <!-- paragraf 2 -->
+        <div class="whole_paragraph">
+
+            <div class="Info_box_frame">
+
+                <p class="ja">PHPBB 3.2.X</p>
+                <div class="back">
+                    <div class="nosz"><p class="first_name">TEMATY </p></div>
+                    <div class="nosz"><p class="first_name">POSTY </p></div>
+                    <div class="nosz"><p class="first_name">OSTATNI POST</p></div>
+                </div>
+    
+            </div>
+                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                <div class="one_content_line">
+                    <img src="ikona tabeli 2.png">
+                    <div class="parttwo">
+                        <h4>Użytkowanie</h4>
+                        <p>Pomoc przy instalacji oraz użytkowaniu phpBB 3.2.x.</p>
+                        <p>Subfora: <a>Integracja</a>, <a>Konwersja</a></p>
+                    </div>
+                    <div class="right_container">
+                        <p id="pjeden">243</p>
+                        <p id="pdwa">1446</p>
+                        <div class="reszta">
+                     
+                            <h4 id="hcztjeden">Re: Problemy po zmianie serwe…</h4>
+                            <h6>autor: <a style="color: green">vader</a></h6>
+                            <h6 id="hcztdwa">20 stycznia 2020, 7:51</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- KONIEC DIVA  -->
+                                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                                <div class="one_content_line">
+                                    <img src="ikona tabeli 2.png">
+                                    <div class="parttwo">
+                                        <h4>Rozszerzenia</h4>
+                                        <p>Pomoc przy instalacji i konfiguracji rozszerzeń do phpBB 3.2.x..</p>
+                                        <p>Subfora: <a>Pomoc</a>, <a>Dla deweloperów</a>, <a>Rozszerzenia użytkowników</a>, <a>Polskie lokalizacje</a>, <a>Poszukiwania</a></p>
+                                    </div>
+                                    <div class="right_container">
+                                        <p id="pjeden">133</p>
+                                        <p id="pdwa">548</p>
+                                        <div class="reszta">
+                                     
+                                            <h4 id="hcztjeden">Re: Ukrywanie linków</h4>
+                                            <h6>autor: <a style="color: green">vader</a></h6>
+                                            <h6 id="hcztdwa">dzisiaj, 7:37</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- KONIEC DIVA  -->
+                                <div class="one_content_line">
+                                    <img src="ikona tabeli 2.png">
+                                    <div class="parttwo">
+                                        <h4>Style</h4>
+                                        <p>Pomoc i dyskusje na temat stylów do phpBB 3.2.x.</p>
+                                        <p>Subfora: <a>Pomoc</a>, <a>Style użytkowników</a>, <a>Komponenty</a></p>
+                                    </div>
+                                    <div class="right_container">
+                                        <p id="pjeden">50</p>
+                                        <p id="pdwa">252</p>
+                                        <div class="reszta">
+                                     
+                                            <h4 id="hcztjeden">Re: Błąd stylu po aktualizacji</h4>
+                                            <h6>autor: <a style="color: green">vader</a></h6>
+                                            <h6 id="hcztdwa">wczoraj, 14:14</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+        </div>
+        <!-- paragraf 3 -->
+        <div class="whole_paragraph">
+
+            <div class="Info_box_frame">
+
+                <p class="ja">PHPBB 3.1.X</p>
+                <div class="back">
+                    <div class="nosz"><p class="first_name">TEMATY </p></div>
+                    <div class="nosz"><p class="first_name">POSTY </p></div>
+                    <div class="nosz"><p class="first_name">OSTATNI POST</p></div>
+                </div>
+    
+            </div>
+                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                <div class="one_content_line">
+                    <img src="ikona tabeli 2.png">
+                    <div class="parttwo">
+                        <h4>Użytkowanie</h4>
+                        <p>Pomoc przy instalacji oraz użytkowaniu phpBB 3.1.x.</p>
+                        <p>Subfora: <a>Konwersja</a>, <a>Integracja</a></p>
+                    </div>
+                    <div class="right_container">
+                        <p id="pjeden">295</p>
+                        <p id="pdwa">1291</p>
+                        <div class="reszta">
+                     
+                            <h4 id="hcztjeden">Re: Problem z dodawaniem nowy…</h4>
+                            <h6>autor: <a style="color: green">vader</a></h6>
+                            <h6 id="hcztdwa">11 maja 2020, 03:17</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- KONIEC DIVA  -->
+                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                <div class="one_content_line">
+                    <img src="ikona tabeli 2.png">
+                    <div class="parttwo">
+                        <h4>Rozszerzenia</h4>
+                        <p>Pomoc przy instalacji i konfiguracji rozszerzeń do phpBB 3.1.x..</p>
+                        <p>Subfora: <a>Pomoc</a>, <a>Dla deweloperów</a>, <a>Rozszerzenia użytkowników</a>, <a>Polskie lokalizacje</a>, <a>Poszukiwania</a></p>
+                    </div>
+                    <div class="right_container">
+                        <p id="pjeden">149</p>
+                        <p id="pdwa">578</p>
+                        <div class="reszta">
+                        
+                            <h4 id="hcztjeden">Re: [phpBB 3.1] Instalacja ro…</h4>
+                            <h6>autor: <a style="color: green">vader</a></h6>
+                            <h6 id="hcztdwa">20 kwietnia 2020, 21:45</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- KONIEC DIVA  -->
+                        <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                        <div class="one_content_line">
+                            <img src="ikona tabeli 2.png">
+                            <div class="parttwo">
+                                <h4>Style</h4>
+                                <p>Pomoc i dyskusje na temat stylów do phpBB 3.1.x</p>
+                                <p>Subfora: <a>Pomoc</a>, <a>Style użytkowników</a>, <a>Komponenty</a></p>
+                            </div>
+                            <div class="right_container">
+                                <p id="pjeden">86</p>
+                                <p id="pdwa">346</p>
+                                <div class="reszta">
+                             
+                                    <h4 id="hcztjeden">Re: Downgrade stylu</h4>
+                                    <h6>autor: <a style="color: green">vader</a></h6>
+                                    <h6 id="hcztdwa">09 maja 2019, 13:18</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- KONIEC DIVA  -->
+    
+
+
+        </div>
+        <!-- paragraf 4 -->
+        <div class="whole_paragraph">
+
+            <div class="Info_box_frame">
+
+                <p class="ja">POZOSTAŁE</p>
+                <div class="back">
+                    <div class="nosz"><p class="first_name">TEMATY </p></div>
+                    <div class="nosz"><p class="first_name">POSTY </p></div>
+                    <div class="nosz"><p class="first_name">OSTATNI POST</p></div>
+                </div>
+    
+            </div>
+                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                <div class="one_content_line">
+                    <img src="ikona tabeli.png">
+                    <div class="parttwo">
+                        <h4>Dyskusje o phpBB</h4>
+                        <p>Tutaj możesz luźno podyskutować o skrypcie phpBB.</p>
+                    </div>
+                    <div class="right_container">
+                        <p id="pjeden">167</p>
+                        <p id="pdwa">990</p>
+                        <div class="reszta">
+                     
+                            <h6>autor: <a>zloomek</a></h6>
+                            <h6 id="hcztdwa">15 maja 2020, 18:27</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- KONIEC DIVA  -->
+                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                <div class="one_content_line">
+                    <img src="ikona tabeli.png">
+                    <div class="parttwo">
+                        <h4>Webmastering</h4>
+                        <p>Forum poświęcone skryptom, językom programowania, serwerom i hostingowi, domenom itp.</p>
+                    </div>
+                    <div class="right_container">
+                        <p id="pjeden">267</p>
+                        <p id="pdwa">1437</p>
+                        <div class="reszta">
+                        
+                            <h4 id="hcztjeden">Re: Problem z tagiem video na…</h4>
+                            <h6>autor: <a style="color: green">vader</a></h6>
+                            <h6 id="hcztdwa">20 kwietnia 2020, 14:47</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- KONIEC DIVA  -->
+                        <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                        <div class="one_content_line">
+                            <img src="ikona tabeli.png">
+                            <div class="parttwo">
+                                <h4>Ogólne dyskusje</h4>
+                                <p>Rozmowy z innymi użytkownikami forum na różne tematy, niekoniecznie związane ze skryptem phpBB.</p>
+                            </div>
+                            <div class="right_container">
+                                <p id="pjeden">696</p>
+                                <p id="pdwa">368</p>
+                                <div class="reszta">
+                             
+                                    <h4 id="hcztjeden">Re: Problem ze strukturą for …</h4>
+                                    <h6>autor: <a style="color: green">vader</a></h6>
+                                    <h6 id="hcztdwa">dzisiaj, 07:33</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- KONIEC DIVA  -->
+                        <div class="one_content_line">
+                            <img src="ikona tabeli.png">
+                            <div class="parttwo">
+                                <h4>Oferty</h4>
+                                <p>Forum służące do umieszczanie zleceń i ofert. Stare oferty znikają po 30 dniach.</p>
+                            </div>
+                            <div class="right_container">
+                                <p id="pjeden">1</p>
+                                <p id="pdwa">1</p>
+                                <div class="reszta">
+                             
+                                    <h4 id="hcztjeden">Zlecenie przeniesienia forum</h4>
+                                    <h6>autor: <a>Akwapark</a></h6>
+                                    <h6 id="hcztdwa">12 maja 2020, 09:05</h6>
+                                </div>
+                            </div>
+                        </div>
+
+
+        </div>
+        <!-- paragraf 5 -->
+        <div class="whole_paragraph">
+
+            <div class="Info_box_frame">
+
+                <p class="ja">PHPBB 2.0.X, 3.0.X</p>
+                <div class="back">
+                    <div class="nosz"><p class="first_name">TEMATY </p></div>
+                    <div class="nosz"><p class="first_name">POSTY </p></div>
+                    <div class="nosz"><p class="first_name">OSTATNI POST</p></div>
+                </div>
+    
+            </div>
+                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                <div class="one_content_line">
+                    <img src="ikona tabeli 3.png">
+                    <div class="parttwo">
+                        <h4>Archiwum 2.0.x</h4>
+                        <p>Archiwum tematów dotyczących phpBB 2.0.x. Wsparcie zostało zakończone 01 stycznia 2009 roku.</p>
+                    </div>
+                    <div class="right_container">
+                        <p id="pjeden">3873</p>
+                        <p id="pdwa">17772</p>
+                        <div class="reszta">
+                     
+                            <h4 id="hcztjeden">Re: Wyświetlanie Załączników …</h4>
+                            <h6>autor: <a>Bielu</a></h6>
+                            <h6 id="hcztdwa">21 stycznia 2015, 07:13</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- KONIEC DIVA  -->
+                <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+    
+                <div class="one_content_line">
+                    <img src="ikona tabeli 3.png">
+                    <div class="parttwo">
+                        <h4>Archiwum 3.0.x</h4>
+                        <p>Archiwum tematów dotyczących phpBB 3.0.x. Wsparcie zostało zakończone</p>
+                    </div>
+                    <div class="right_container">
+                        <p id="pjeden">6585</p>
+                        <p id="pdwa">30612</p>
+                        <div class="reszta">
+                        
+                            <h4 id="hcztjeden">Re: Galeria na forum - prośba…</h4>
+                            <h6>autor: <a>MaRRcin929</a></h6>
+                            <h6 id="hcztdwa">02 marca 2017, 02:10</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- KONIEC DIVA  -->
+                        <!-- JEDEN DIV Z INFORMACJAMI ZAWARTOŚĆ -->
+
+                        <!-- KONIEC DIVA  -->
+    
+
+        </div>
+        <!-- paragraf 6 -->
+        
+
+        <!-- koniec częśći pytań -->
+
+        <div class="login">
+            <a>ZALOGUJ SIĘ</a>
+            <div class="dot"></div>
+            <a>ZAREJESTRUJ SIĘ</a>
+        </div>
+
+        <div class="loginform">
+        Nazwa użytkownika : <input type="text" name="text_input" >
+        Hasło:<input type="password" name="passwd">
+        <a>Nie pamiętam hasła </a>|  
+        <label for="chcbx">Zapamiętaj mnie <input type="checkbox" id="chcbx" name="chcbx"></label>
+        <button class="guzik">Zaloguj się </button>
+        </div>
+
+        <div class="who_is">
+            <div class="dvone">Kto jest online</div>
+            <div class="border"></div>
+            <div class="content_of_div">
+                Jest <b>30</b> użytkowników online :: 0 zarejestrowanych, 0 ukrytych i 30 gości (wg danych z ostatnich 5 minut)
+                Najwięcej użytkowników (<b>747</b>) było online 14 grudnia 2015, 16:51
+            </div>
+        </div>
+    
+        <!-- urodziny -->
+
+        <div class="who_is">
+            <div class="dvone">Urodziny</div>
+            <div class="border"></div>
+            <div class="content_of_div">
+                Dziś nikt nie ma urodzin ale i tak sto lat :)
+            </div>
+        </div>
+        <!-- statystyki -->
+
+        <div class="who_is">
+            <div class="dvone">Staystyki</div>
+            <div class="border"></div>
+            <div class="content_of_div" id="lastcontent">
+                Liczba postów: <b>61461 </b>
+                <div class="dot"></div>
+                Liczba tematów:<b>12667  </b>
+                <div class="dot"></div>
+                    Liczba użytkowników:<b>12263 </b>
+                     Ostatnio zarejestrowany użytkownik: <b id="xd_nick"> szymiツ </b>
+                </div>
+   
+
+                </div>
+      
+
+        <div class="bottom_menu">
+            <div class="bottom_menu_item">
+                <svg class="srodek"  viewBox="0 0 576 512"  >
+
+                    <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+        
+                </svg>
+                <a class="niebieski" >Strona Główna</a>
+            </div>
+
+            <div class="rest_of_menu">
+                <div class="bottom_menu_item">
+                    <svg class="srodek" viewBox="0 0 512 512" >
+                       <path d="M461.913,83.478H50.087C22.467,83.478,0,105.974,0,133.565v244.87c0,27.622,22.498,50.087,50.087,50.087h411.826
+                           c27.578,0,50.087-22.453,50.087-50.087v-244.87C512,105.984,489.543,83.478,461.913,83.478z M460.563,116.87
+                           c-8.494,8.494-186.871,186.871-192.757,192.758c-6.527,6.526-17.085,6.526-23.612,0C238.303,303.735,59.927,125.36,51.437,116.87
+                           H460.563z M33.391,377.085V146.046l115.519,115.519L33.391,377.085z M62.567,395.13l109.954-109.954l48.061,48.061
+                           c19.526,19.528,51.304,19.529,70.834,0l48.061-48.061L449.432,395.13H62.567z M478.609,377.085L363.089,261.565l115.519-115.519
+                           V377.085z"/>
+               </svg>
+                    <a class="niebieski">Kontakt z nami</a>
+                </div>
+            </div>
+            <div class="bottom_menu_item">
+                <svg class="srodek" viewBox="0 0 24 24"><path d="M12 4.942c1.827 1.105 3.474 1.6 5 1.833v7.76c0 1.606-.415 1.935-5 4.76v-14.353zm9-1.942v11.535c0 4.603-3.203 5.804-9 9.465-5.797-3.661-9-4.862-9-9.465v-11.535c3.516 0 5.629-.134 9-3 3.371 2.866 5.484 3 9 3zm-2 1.96c-2.446-.124-4.5-.611-7-2.416-2.5 1.805-4.554 2.292-7 2.416v9.575c0 3.042 1.69 3.83 7 7.107 5.313-3.281 7-4.065 7-7.107v-9.575z"/></svg>
+                <a class="niebieski">Zespół administracyjny</a>
+
+            </div>
+            <div class="bottom_menu_item" style="padding-right: 10px;">
+                <svg class="srodek" height="512" viewBox="0 0 128 128" width="512" ><path d="m104.963 24.043h-20.7a14.282 14.282 0 0 0 -13.233-9.459h-14.056a14.282 14.282 0 0 0 -13.233 9.459h-20.7a1.751 1.751 0 0 0 -1.75 1.75v10.333a1.751 1.751 0 0 0 1.75 1.75h2.629l8.546 69.618a6.579 6.579 0 0 0 6.376 5.922h46.816a6.579 6.579 0 0 0 6.376-5.922l8.546-69.618h2.633a1.751 1.751 0 0 0 1.75-1.75v-10.333a1.751 1.751 0 0 0 -1.75-1.75zm-47.989-5.959h14.052a10.657 10.657 0 0 1 9.393 5.959h-32.838a10.657 10.657 0 0 1 9.393-5.959zm33.337 88.983a3.084 3.084 0 0 1 -2.9 2.849h-46.819a3.084 3.084 0 0 1 -2.9-2.849l-8.492-69.191h69.6zm12.9-72.691h-78.424v-6.833h78.426z"/><path d="m64 99.928a5.649 5.649 0 0 0 5.643-5.643v-43.9a5.643 5.643 0 0 0 -11.286 0v43.9a5.649 5.649 0 0 0 5.643 5.643zm-2.143-49.545a2.143 2.143 0 0 1 4.286 0v43.9a2.143 2.143 0 0 1 -4.286 0z"/><path d="m80.458 99.928a5.617 5.617 0 0 0 5.57-4.9l5.524-43.99a5.613 5.613 0 0 0 -11.139-1.392l-5.524 43.988a5.6 5.6 0 0 0 5.569 6.294zm-2.1-5.858 5.525-43.991a2.112 2.112 0 0 1 2.1-1.839 2.089 2.089 0 0 1 1.589.716 2.066 2.066 0 0 1 .508 1.644l-5.525 43.99a2.117 2.117 0 0 1 -3.686 1.123 2.064 2.064 0 0 1 -.508-1.643z"/><path d="m36.448 51.035 5.524 43.99a5.613 5.613 0 0 0 11.139-1.391l-5.524-43.99a5.613 5.613 0 0 0 -11.139 1.391zm3.98-2.079a2.089 2.089 0 0 1 1.589-.716 2.112 2.112 0 0 1 2.1 1.84l5.525 43.99a2.064 2.064 0 0 1 -.508 1.642 2.117 2.117 0 0 1 -3.686-1.123l-5.528-43.989a2.066 2.066 0 0 1 .508-1.644z"/></svg>
+                <a class="niebieski">Usuń ciasteczka witryny</a>
+            </div>
+            
+            <p id="utc" style="padding-right: 10px;"">Strefa czasowa UTC+01:00</p>
+            </div>
+        </div>
+    
+    </div>
+    <div class="bottom_text">
+        Technologię dostarcza phpBB® Forum Software © phpBB Limited</br>
+        Polski pakiet językowy dostarcza phpBB.pl</div>
+</body>
+</html>
