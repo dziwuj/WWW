@@ -1,0 +1,418 @@
+html {
+  position: relative;
+  margin: 0px;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #f5ebe9;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.srodek {
+  position: relative;
+  margin: 0 auto;
+}
+
+.zawartosc {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 160px 100px 720px 80px 250px 400px;
+      grid-template-rows: 160px 100px 720px 80px 250px 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
+nav {
+  position: relative;
+  float: left;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
+.opcje {
+  position: relative;
+  float: left;
+  background-color: #f7b3a0;
+  width: 21%;
+  height: auto;
+  margin: 0 2%;
+  font-size: 2rem;
+  padding: 2% 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.opcje a {
+  text-decoration: none;
+  color: #75554c;
+}
+
+.opcje p {
+  color: #75554c;
+  margin: 0px;
+}
+
+.content {
+  position: relative;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 400px 30px 720px;
+      grid-template-columns: 400px 30px 720px;
+  -ms-grid-rows: 300px 30px 300px;
+      grid-template-rows: 300px 30px 300px;
+}
+
+.graf1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.slideshow-container {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.slideshow-container a {
+  font-size: 90px;
+}
+
+.graf3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -3.5vh;
+  padding: 16px;
+  color: #000;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.prev {
+  right: 700px;
+}
+
+.next {
+  right: 40px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  color: #f7b3a0;
+}
+
+#dots {
+  position: absolute;
+  top: 600px;
+  left: 750px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #f7b3a0;
+}
+
+.podpis {
+  margin: 0px;
+  position: relative;
+  bottom: 104px;
+  display: none;
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  display: none;
+}
+
+.podpis p {
+  margin: 0px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.podpis2 {
+  margin: 0px;
+  position: relative;
+  bottom: 214px;
+  display: none;
+  width: 100%;
+  height: 210px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  display: none;
+  z-index: 1;
+}
+
+.podpis2 p {
+  margin: 0px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.graf1:hover {
+  cursor: pointer;
+}
+
+.graf1:hover .podpis {
+  background-color: #0000005F;
+  display: table;
+}
+
+.slideshow-container:hover {
+  cursor: pointer;
+}
+
+.slideshow-container:hover .podpis2 {
+  background-color: #0000005F;
+  display: table;
+}
+
+.graf3:hover {
+  cursor: pointer;
+}
+
+.graf3:hover .podpis {
+  background-color: #0000005F;
+  display: table;
+}
+
+.czesto {
+  position: relative;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+  font-size: 40px;
+  color: #75554c;
+  text-align: center;
+}
+
+.czesto p {
+  position: relative;
+  margin: 0px;
+}
+
+.galeria {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
+.zdj {
+  position: relative;
+  float: left;
+  width: 250px;
+  height: 100%;
+  margin: 0 25px;
+  background-color: #fff;
+}
+
+.zdj img {
+  height: 100%;
+  width: 100%;
+}
+
+.zdj:hover {
+  cursor: pointer;
+}
+
+.zdj:hover .podpis {
+  background-color: #0000005f;
+  display: table;
+}
+
+.fake {
+  position: relative;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6 / 7;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+  bottom: 0px;
+  width: 100%;
+  height: 250px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 1200px;
+  height: 300px;
+  background-color: #f7b3a0;
+}
+
+.sociale {
+  position: relative;
+  float: left;
+  margin-left: 60px;
+  height: 100%;
+  width: 320px;
+  color: #75554c;
+  font-size: 20px;
+}
+
+.sociale img {
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+
+.sociale p {
+  float: left;
+  margin: 0px;
+  padding: 20px 0;
+  padding-left: 30px;
+}
+
+.sociale a {
+  width: 100%;
+  height: 100%;
+  color: #75554c;
+}
+
+.insta {
+  position: relative;
+  margin: 50px 0;
+  width: 100%;
+  height: 80px;
+}
+
+.fb {
+  position: relative;
+  margin: 30px 0;
+  width: 100%;
+  height: 80px;
+}
+
+.adres {
+  float: right;
+  margin: 80px 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.adres p {
+  margin: 0px;
+  color: #75554c;
+  font-size: 20px;
+}
+
+.kontakt {
+  position: relative;
+  float: left;
+  width: auto;
+  height: auto;
+  padding-top: 75px;
+  padding-left: 75px;
+}
+
+.kontakt p {
+  margin: 0px;
+  color: #75554c;
+  padding-top: 60px;
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+.napisz {
+  border: 4px solid #000;
+  border-radius: 14px;
+  height: 100px;
+  width: 400px;
+  color: #75554c;
+  font-size: 40px;
+  background-color: #f5ebe9;
+}
+
+.napisz a {
+  text-decoration: none;
+  color: #75554c;
+  padding: 30px 35px;
+}
+
+.napisz:focus {
+  outline-width: 0;
+}
+/*# sourceMappingURL=styles.css.map */

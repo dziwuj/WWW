@@ -1,0 +1,320 @@
+$czarny: #000
+$bialy: #fff
+$main_color: #f7b3a0
+$background: #f5ebe9
+$tekst: #75554c
+
+html
+    position: relative
+    margin: 0px
+    
+body
+    position: relative
+    margin: 0 auto
+    padding: 0px
+    width: 100%
+    height: 100%
+    background-color: $background
+    font-weight: bold
+    font-family: 'Roboto', sans-serif
+
+.srodek
+    position: relative
+    margin: 0 auto
+
+.zawartosc
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0)
+    width: auto
+    display: grid
+    grid-template-columns: auto
+    grid-template-rows: 160px 100px 720px 80px 250px 400px
+    align-items: center
+
+header
+    align-items: center
+    position: relative
+    grid-row: 1 / 2
+    grid-column: 1 / 1
+
+nav
+    position: relative
+    float: left
+    grid-row: 2 / 3
+    grid-column: 1 / 1
+
+.opcje
+    position: relative
+    float: left
+    background-color: $main_color
+    width: 21%
+    height: auto
+    margin: 0 2%
+    font-size: 2rem
+    padding: 2% 0
+    text-align: center
+    cursor: pointer
+
+    a
+        text-decoration: none
+        color: $tekst
+
+    p
+        color: $tekst
+        margin: 0px
+
+.content
+    position: relative
+    grid-row: 3 / 4
+    grid-column: 1 / 1
+    display: grid
+    grid-template-columns: 400px 30px 720px
+    grid-template-rows: 300px 30px 300px
+
+.graf1
+    grid-row: 1 / 2
+    grid-column: 1 / 2
+
+.slideshow-container
+    grid-row: 1 / 4
+    grid-column: 3 / 4
+
+    a
+        font-size: 90px
+
+.graf3
+    grid-row: 3 / 4
+    grid-column: 1 / 2
+
+.mySlides 
+  display: none
+
+.prev, .next 
+  cursor: pointer
+  position: absolute
+  top: 50%
+  width: auto
+  margin-top: -3.5vh
+  padding: 16px
+  color: $czarny
+  font-weight: bold
+  font-size: 17px
+  transition: 0.6s ease
+  border-radius: 0 3px 3px 0
+  user-select: none
+
+.prev
+    right: 700px
+
+.next 
+  right: 40px
+  border-radius: 3px 0 0 3px
+
+.prev:hover, .next:hover 
+  color: $main_color
+
+#dots
+    position: absolute
+    top: 600px
+    left: 750px
+
+.dot
+  cursor: pointer
+  height: 20px
+  width: 20px
+  margin: 0 2px
+  background-color: $czarny
+  border-radius: 50%
+  display: inline-block
+  transition: background-color 0.6s ease
+
+.active, .dot:hover 
+  background-color: $main_color
+
+.podpis
+    margin: 0px
+    position: relative
+    bottom: 104px
+    display: none
+    width: 100%
+    height: 100px
+    color: $bialy
+    font-size: 30px
+    text-align: center
+    display: none
+
+    p
+        margin: 0px
+        display: table-cell
+        vertical-align: middle
+
+.podpis2
+    margin: 0px
+    position: relative
+    bottom: 214px
+    display: none
+    width: 100%
+    height: 210px
+    color: $bialy
+    font-size: 30px
+    text-align: center
+    display: none
+    z-index: 1
+
+    p
+        margin: 0px
+        display: table-cell
+        vertical-align: middle
+
+.graf1:hover
+    cursor: pointer
+    
+.graf1:hover .podpis
+    background-color: #0000005F
+    display: table
+    
+.slideshow-container:hover
+    cursor: pointer
+
+.slideshow-container:hover .podpis2
+    background-color: #0000005F
+    display: table
+
+.graf3:hover
+    cursor: pointer
+
+.graf3:hover .podpis
+    background-color: #0000005F
+    display: table
+
+.czesto
+    position: relative
+    grid-row: 4 / 5
+    grid-column: 1 / 1
+    font-size: 40px
+    color: $tekst
+    text-align: center
+
+    p
+        position: relative
+        margin: 0px
+
+.galeria
+    position: relative
+    width: 100%
+    height: 100%
+    grid-row: 5 / 6
+    grid-column: 1 / 1
+
+.zdj
+    position: relative
+    float: left
+    width: 250px
+    height: 100%
+    margin: 0 25px
+    background-color: $bialy
+
+    img
+        height: 100%
+        width: 100%
+
+.zdj:hover
+    cursor: pointer
+
+.zdj:hover .podpis
+    background-color: #0000005f
+    display: table
+
+.fake
+    position: relative
+    grid-row: 6 / 7
+    grid-column: 1 / 1
+    bottom: 0px
+    width: 100%
+    height: 250px
+
+footer
+    position: absolute
+    bottom: 0px
+    width: 1200px
+    height: 300px
+    background-color: $main_color
+
+.sociale
+    position: relative
+    float: left
+    margin-left: 60px
+    height: 100%
+    width: 320px
+    color: $tekst
+    font-size: 20px
+
+    img
+        float: left
+        width: 70px
+        height: 70px
+        
+    p
+        float: left
+        margin: 0px
+        padding: 20px 0 
+        padding-left: 30px
+
+    a
+        width: 100%
+        height: 100%
+        color: $tekst
+
+.insta
+    position: relative
+    margin: 50px 0
+    width: 100%
+    height: 80px
+
+.fb
+    position: relative
+    margin: 30px 0
+    width: 100%
+    height: 80px
+
+.adres
+    float: right
+    margin: 80px 40px
+    justify-content: center
+    p
+        margin: 0px
+        color: $tekst
+        font-size: 20px
+
+.kontakt
+    position: relative
+    float: left
+    width: auto
+    height: auto
+    padding-top: 75px
+    padding-left: 75px
+
+    p
+        margin: 0px
+        color: $tekst
+        padding-top: 60px
+        padding-left: 20px
+        font-size: 25px
+
+.napisz
+    border: 4px solid $czarny
+    border-radius: 14px
+    height: 100px
+    width: 400px
+    color: $tekst
+    font-size: 40px
+    background-color: $background
+
+    a
+        text-decoration: none
+        color: $tekst
+        padding: 30px 35px
+
+.napisz:focus
+    outline-width: 0

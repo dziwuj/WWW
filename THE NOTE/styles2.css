@@ -1,0 +1,141 @@
+html {
+  position: relative;
+  margin: 0px;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #f5ebe9;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.srodek {
+  position: relative;
+  margin: 0 auto;
+}
+
+.zawartosc {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 160px 100px 600px 200px 600px;
+      grid-template-rows: 160px 100px 600px 200px 600px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
+nav {
+  position: relative;
+  float: left;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
+.opcje {
+  position: relative;
+  float: left;
+  background-color: #f7b3a0;
+  width: 21%;
+  height: auto;
+  margin: 0 2%;
+  font-size: 2rem;
+  padding: 2% 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.opcje a {
+  text-decoration: none;
+  color: #75554c;
+}
+
+.opcje p {
+  color: #75554c;
+  margin: 0px;
+}
+
+.google {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+  margin: 0 auto;
+}
+
+.mapa {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.mapa .info {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mapa .info p {
+  margin: 0px;
+  color: #75554c;
+  font-size: 30px;
+}
+
+.formularz {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+#name {
+  height: 20px;
+  font-size: 20px;
+}
+
+#mail {
+  width: 200px;
+  height: 20px;
+  font-size: 20px;
+}
+
+#wiadomosc {
+  width: 600px;
+  height: 300px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+/*# sourceMappingURL=styles.css.map */
