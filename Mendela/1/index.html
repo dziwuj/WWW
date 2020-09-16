@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        table{
+            border: 0px solid;
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+    </style>
+    <script>
+        document.write("<b>"+'"Witaj JavaScript"'+"</b>");
+
+        document.write("</br>");
+        document.write("</br>");
+
+///////////
+
+        for(var i=-111;i<=111;i+=1){
+            document.write("</br>"+" "+i);
+        };
+
+        document.write("</br>");
+        document.write("</br>");
+
+        for(var i=50;i>=0;i-=3){
+            document.write(" "+i);
+        };
+
+        document.write("</br>");
+        document.write("</br>");
+
+        for(var j=50;j>=0;j-=1){
+            if(j>40 || j<20){
+                document.write(j+" ")
+            }
+        }  
+
+        document.write("</br>");
+        document.write("</br>");
+///////////
+
+        for(var i=-30;i<40;i+=2){
+            if(i<5 || i>14){
+                console.log(i)
+            }
+        }
+
+        console.log('----------------')
+
+        for(var i=-19;i<40;i+=2){
+            if(i<3 || i>12){
+                console.log(i)
+            }
+        }
+
+        console.log('----------------')
+
+        for(var i=-99;i<41;i+=3){
+            if(i<-50 || i>=12){
+                console.log(i)
+            }
+        }
+
+///////////
+
+        var liczba = parseInt(window.prompt("Podaj liczbę"));
+
+        for(var i=0;i<liczba;i+=1)
+            document.write("x")
+
+        document.write("</br>");
+        document.write("</br>");
+
+///////////    
+
+        for(var i=liczba;i>=0;i-=1){
+            document.write("x&ensp;");
+        };
+
+        document.write("</br>");
+
+        for(var j=liczba-2;j>=0;j-=1){
+        document.write("x");
+
+        for(var k=(liczba*2)-2;k>=0;k-=1){
+        document.write("&ensp;");
+        };
+
+        document.write("x");
+        document.write("</br>");
+        };
+
+        for(var l=liczba;l>=0;l-=1){
+            document.write("x&ensp;");
+        };
+        
+        document.write("</br>");
+        document.write("</br>");
+    
+///////////
+        var n=0;
+
+        for(var i=liczba;i>=0;i-=1){
+
+            for(var a=1;a<=liczba*2;a+=2){
+
+                for(var i=liczba-a/2;i>=0;i-=1){
+                    document.write("&ensp;");
+                };
+
+                n=0;
+
+                while(n<a){
+                    document.write("x");
+                    n+=1;
+                };
+
+                document.write("</br>");
+            };   
+        };
+
+        document.write("</br>");
+        document.write("</br>");
+
+///////////
+
+        for(var a=2;a<=liczba+1;a+=1){
+
+            n=1;
+
+            while(n<a){
+                document.write(n);
+                n+=1;
+            };
+
+            document.write("</br>");
+        };  
+
+        document.write("</br>");
+        document.write("</br>"); 
+
+///////////
+
+    var g=1;
+
+    for(var a=2;a<=liczba+1;a+=1){
+
+        n=1;
+        g=liczba+1;
+
+        while(a<g){
+            document.write("&ensp;");
+            g-=1;
+        };
+
+        while(n<a){
+            document.write(n);
+            n+=1;
+        };
+
+        document.write("</br>");
+
+    };  
+
+    document.write("</br>");
+    document.write("</br>"); 
+
+///////////
+
+    var tmp = 1;
+
+    if(liczba == 0 || liczba == 1){
+
+        tmp = 1;
+
+    }
+    else{
+
+        for(var i=1;i<=liczba;i+=1){
+            tmp = tmp * i;
+        }
+    }
+    
+
+    document.write("Silnia "+liczba+" to: "+tmp)
+
+    document.write("</br>");
+    document.write("</br>"); 
+
+///////////
+
+    suma = 0;
+
+    for(var i=1;i<=liczba;i+=2){
+        suma+=i;   
+    }
+
+    document.write('Suma liczb nieparzystych do "x" wynosi :'+suma);
+
+    document.write("</br>");
+    document.write("</br>"); 
+
+///////////
+
+    n = 0;
+
+    if(liczba<2){
+
+        window.alert(liczba+" to nie liczba pierwsza.");
+
+    }
+    else{
+
+        for(var i=2;i<=liczba/2;i+=1){
+
+            if(liczba % i == 0){
+                window.alert(liczba+" to nie liczba pierwsza.");
+                n++;
+                break;    
+            }    
+        }
+        if(n == 0)
+        window.alert(liczba+" to liczba pierwsza.");
+
+    }
+
+///////////
+
+    var linia = "";
+    document.write("<center><table border='1px'>");
+    
+    for (var i = 0; i < liczba+1; i++) {
+        if(i == 0)
+        document.write("<tr style='height:40px; background-color: blue'>");
+        else
+        document.write("<tr style='height:40px;'>");
+
+        for (var j = 0; j < liczba + 1; j++) {
+
+            if(i == 0 && j > 0){
+            document.write( "<td style='width:40px; background-color: blue; color: white'><center><font size='4'>" + j + "</center></font></td>");
+            } 
+            else if(j == 0 && i > 0){
+            document.write( "<td style='width:40px; background-color: blue; color: white'><center><font size='4'>" + i + "</center></font></td>");
+            } 
+            else if(i > 0 && j > 0){
+                if(i != j)
+                document.write("<td style='width:40px; background-color: orange'><center><font size='4'>" + i * j + "</center></font></td>");
+                else
+                document.write("<td style='width:40px; background-color: white'><center><font size='4'>" + i * j + "</center></font></td>");
+            }
+            else if(i == 0 && j == 0) {
+                document.write( "<td style='width:40px; background-color: white; border: 0px white'><center><font size='4'>" + "</center></font></td>");
+            }
+        }
+
+        linia += "<br>";
+        
+    }
+
+///////////
+    
+    var pesel = window.prompt("Podaj pesel");
+
+    var temp = 9*parseInt(pesel[0]) + 7*parseInt(pesel[1]) + 3*parseInt(pesel[2]) + 1*parseInt(pesel[3]) + 9*parseInt(pesel[4]) + 7*parseInt(pesel[5]) + 3*parseInt(pesel[6]) + 1*parseInt(pesel[7]) + 9*parseInt(pesel[8]) + 7*parseInt(pesel[9])
+    var kontrolna = temp % 10
+    var dlugosc = pesel.length
+    var kod = parseInt(pesel[2]+pesel[3])
+    var rok = ''
+    var month = ''
+
+    if(kod>80 && kod<93)
+        rok += 18
+    else if(kod>0 && kod<13)
+        rok += 19
+    else if(kod>20 && kod<33)
+        rok += 20
+    else if(kod>40 && kod<53)
+        rok += 21
+    else if(kod>60 && kod<73)
+        rok += 22
+
+    rok += pesel[0]+pesel[1]
+
+    if(pesel[2] % 2 == 0 && pesel[3] == 1)
+        month += 'stycznia'
+    else if(pesel[2] % 2 == 0 && pesel[3] == 2)
+        month += 'lutego'
+    else if(pesel[2] % 2 == 0 && pesel[3] == 3)
+        month += 'marca'
+    else if(pesel[2] % 2 == 0 && pesel[3] == 4)
+        month += 'kwietnia'
+    else if(pesel[2] % 2 == 0 && pesel[3] == 5)
+        month += 'maja'
+    else if(pesel[2] % 2 == 0 && pesel[3] == 6)
+        month += 'czerwca'
+    else if(pesel[2] % 2 == 0 && pesel[3] == 7)
+        month += 'lipca'
+    else if(pesel[2] % 2 == 0 && pesel[3] == 8)
+        month += 'sierpnia'
+    else if(pesel[2] % 2 == 0 && pesel[3] == 9)
+        month += 'września'
+    else if(pesel[2] % 2 == 1 && pesel[3] == 0)
+        month += 'października'
+    else if(pesel[2] % 2 == 1 && pesel[3] == 1)
+        month += 'listopada'
+    else if(pesel[2] % 2 == 1 && pesel[3] == 2)
+        month += 'grudnia'
+
+
+    if(kontrolna != parseInt(pesel[10]))
+        window.alert("Błędny pesel")
+    else if(dlugosc != 11)
+        window.alert("Błędny pesel")
+    else{
+        if(parseInt(pesel[10]) % 2 == 0)
+            window.alert("Jesteś kobietą urodzoną "+pesel[4]+pesel[5]+' '+month+' '+rok)
+        else
+            window.alert("Jesteś mężczyzną urodzonym "+pesel[4]+pesel[5]+' '+month+' '+rok)
+    
+    }
+    
+    </script>
+</head>
+<body>
+</body>
+</html>
