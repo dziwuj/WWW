@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 2</title>
+</head>
+
+<body>
+    <script>
+
+        samog = ['a', 'ą', 'e', 'ę', 'i', 'o', 'u', 'y', 'A', 'Ą', 'E', 'Ę', 'I', 'O', 'U', 'Y'];
+        var userStr = prompt("1. Podaj zdanie, w którym chcesz znaleźć samogłoski: ", 'Litwo! Ojczyzno maja! Ty jesteś jak zdrowie, Ile cię trzeba cenić, ten tylko się dowie, Kto cię stracił. Dziś piękność twą w całej ozdobie Widzę i opisuję, bo tęsknię po tobie" Panno święta, co Jasnej bronisz Częstochowy I w Ostrej świecisz Bramie! Ty, co gród zamkowy Nowogródzki ochraniasz z jego wiernym ludem! Jak mnie dziecko do zdrowia powróciłaś cudem, (Gdy od płaczącej matki pod Twoją opiekę Ofiarowany, martwą podniosłem powiekę I zaraz mogłem pieszo do Twych świątyń progu Iść za wrócone życie podziękować Bogu), Tak nas powrócisz cudem na Ojczyzny łono. Tymczasem przenoś moją duszę utęsknioną Do tych pagórków leśnych, do tych łąk zielonych, Szeroko nad błękitnym Niemnem rozciągnionych; Do tych pól malowanych zbożem rozmaitem, Wyzłacanych pszenicą, posrebrzanych żytem; Gdzie bursztynowy świerzop, gryka jak śnieg biała, Gdzie panieńskim rumieńcem dzięcielina pała, A wszystko przepasane jakby wstęgą, miedzą Zieloną, na niej z rzadka ciche grusze siedzą.');
+        var returnStr = [];
+        //console.log(userStr);
+        for (var iter = 0; iter < userStr.length; iter++) {
+            if (samog.includes(userStr[iter])) {
+                returnStr += userStr[iter].fontcolor('red').bold();
+            } else {
+                returnStr += userStr[iter];
+            }
+        }
+        document.write(returnStr);
+        
+        document.write('</br>');
+        document.write('</br>');
+
+        // 2. Przesuń elementy tablicy jednowymiarowej (podana na początku) x w lewo/prawo.
+        var userArray = eval(window.prompt('2. Podaj tablicę w formacie "[1, 2, 3]"', '[1, 2, 3]'));
+        console.log(userArray);
+        var userOperation = '';
+        while (true) {
+            userOperation = window.prompt("wykonaj operację rotacji: p - prawo, l - lewo, k - Koniec np. p1", 'k')
+            if (userOperation == 'k') {
+                break;
+            }
+            console.log('----- ' + userOperation + ' -----');
+            var operationCount = parseInt(userOperation.slice(1, userOperation.length));
+            switch (userOperation[0]) {
+                case 'p':
+                    for (var iter = 0; iter < operationCount; iter++) {
+                        userArray.unshift(userArray.pop());
+                        console.log(userArray);
+                    }
+                    break;
+                case 'l':
+                    for (var iter = 0; iter < operationCount; iter++) {
+                        userArray.push(userArray.shift());
+                        console.log(userArray);
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+
+        // 3. Znajdź słowo w podanym tekscie i podkreśl je
+        const interpunction = [',', '.', ' '];
+        var userStr = window.prompt("3. Podaj frazę, w której chcesz znaleźć słowo", "ten testowy tekst te słowa testowe testuje: te, ten, Bartek, potencjał, plater. Te.");
+        var findStr = window.prompt("Podaj szukany wyraz", 'te');
+        var startFindingIndex = 0;
+        var indexesToEmphasize = [];    // tablica do przechowania wyszukanych indexów
+        while (true){
+            var findResult = userStr.toLowerCase().indexOf(findStr.toLowerCase(), startFindingIndex);   //szukam wyniku z lowercase
+            if (findResult == -1) break;
+
+            var findFullWord = true;    // sprawdza, czy wynik jest słowem, czy tylko jego częścią
+            if (findResult != 0){
+                if (userStr[findResult - 1] != " ") findFullWord = false;       // nie jest to pełne słowo, a tylko część jakiegoś innego, bo nie ma przed sobą spacji, a nie jest na początku
+            }
+            var isValidEnded = false;
+            for (var i=0; i < interpunction.length; i++){
+                if (userStr[findResult + findStr.length] == interpunction[i]) isValidEnded = true;  // jest poprawnie zakończone, jeśli za wyszukaną frazą jest jakiś znak należący do tablicy interpunkcja
+            }
+            if (!isValidEnded) findFullWord = false;    // jeśli nie ma poprawnego zakończenia, to nie jest poprawne słowo
+
+            if (findFullWord) indexesToEmphasize.push(findResult);  // jeśli wynik jest słowem to dodaje index do tablicy
+            startFindingIndex = findResult + 1; // w następnej iteracji wyszukuje od następnego indexu
+        }
+        for (var i = 0; i < indexesToEmphasize.length; i++){
+            const emindex = indexesToEmphasize[i] + 7 * i; // 7*i zostaje dodane, aby wyszukać index większy o znacznik <u></u> dodany w poprzednej pętli;
+            const startStr = userStr.slice(0, emindex);
+            const endStr = userStr.slice(emindex + findStr.length, userStr.length);
+            var newEmphaseStr = '<u>' + userStr.slice(emindex, emindex + findStr.length) + '</u>';
+            userStr = startStr + newEmphaseStr + endStr;
+        }
+        document.write(userStr);
+
+        document.write('</br>');
+        document.write('</br>');
+
+        // 4. Liczenie słów w tekście:
+        var userStr = prompt('4. Podaj tekst do policzenia słów', 'Adam będzie przeżywał wzruszenie. Adam będzie rumienił się ze wzruszenia. Adam stłumi swoje wzruszenie. Adam ukryje swoje wzruszenie. Adam będzie ukrywał swoje wzruszenie. Adam wywoła wzruszenie u Ewy. Adam wzbudzi wzruszenie w Ewie. Adam zapanuje nad swoim wzruszeniem. Adam będzie zdradzał swoje wzruszenie. Adam zdradzi swoje wzruszenie.');
+        //console.log(userStr);
+        var workUserStr = userStr.toLowerCase();
+
+        // usuwanie znaków interpunkcyjnych
+        var interpunction2 = [',', '.'];
+        for (var i=0; i < interpunction2.length; i++){
+            while (workUserStr.includes(interpunction2[i])){
+                workUserStr = workUserStr.replace(interpunction2[i], '');
+            }
+        }
+
+        // liczenie słów
+        var wordsArray = workUserStr.split(" ");
+        var wordsCounts = {};
+        var uniqiueWordsArray = [];
+        for (var i = 0; i < wordsArray.length; i++){
+            var word = wordsArray[i];
+            if (word == '') continue;  // aby nie liczyć pustych wyrazów powstałych z splitowania paru spacji następujących po sobie
+            if (wordsCounts[word] == null){
+                uniqiueWordsArray.push(word);
+                wordsCounts[word] = 1;
+            } else {
+                wordsCounts[word] = wordsCounts[word] + 1;
+            }
+        }
+
+        // sortowanie malejąco ilością
+        uniqiueWordsArray.sort((a, b) =>  wordsCounts[b] - wordsCounts[a]);
+
+        // prezentacja
+        var randomColor;
+        for (var i = 0; i < uniqiueWordsArray.length; i++){
+            if (i % 5 == 0){
+                randomColor = 'rgb(' + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ")";
+            }
+            var wordLine = (uniqiueWordsArray[i] + " - " + wordsCounts[uniqiueWordsArray[i]]).fontcolor(randomColor).fontsize(20);
+            document.write(wordLine + '<br/>');
+        }
+    </script>
+
+</body>
+
+</html>
