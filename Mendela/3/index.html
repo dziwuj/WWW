@@ -21,7 +21,7 @@
     </div>
     <br/>
     <br/>
-    <input id="kreci" type="text" value="">
+    <input id="kreci" type="text" value="" style="direction: rtl;">
     <br/>
     <br/>
     <h3>Punkty lecą z nieba ?!</h3>
@@ -34,8 +34,6 @@
     <script>
 
         var x = 100;
-        var maly = null;
-        var duzy = null;
         var wyznacznik = true;
  
         function rozmiar() {
@@ -63,20 +61,20 @@
         var tab = ['T','o',' ','s','i','ę',' ','b','a','r','d','z','o',' ','s','z','y','b','k','o',' ','k','r','ę','c','i','!', ' ', ' '];
 
         function tekst (){
-            tab.unshift(tab.pop());
+            tab.push(tab.shift());
             ciong = tab.toString();
             ciong = ciong.split(",").join("");
             document.getElementById("kreci").value = ciong;
         };
 
-        obraca = setInterval(tekst, 100);
+        obraca = setInterval(tekst, 150);
 
 ///////////////////////////////////////////////////////
         
         var tab2 = ['    1p. Siódmy punkt \n', '    1p. Szósty punkt \n', '    1p. Piąty punkt \n', '    1p. Czwarty punkt \n', '    1p. Trzeci punkt \n', '    1p. Drugi punkt \n', '    1p. Pierwszy punkt \n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n'];
 
         function sciana (){
-            tab2.unshift(tab2.pop());
+            tab2.push(tab2.shift());
             str = tab2.toString();
             str = str.split(",").join("");
             document.getElementById("obszar").value = str;
@@ -92,7 +90,7 @@
             document.getElementById("kotek").style.top = 1120 + Math.sin(obrot) * 150+"px";
             document.getElementById("kotek").style.left = 300 + Math.cos(obrot) * 150+"px";
 
-            obrot += 0.01;
+            obrot += 0.03;
         };
 
         korba = setInterval(krenci, 10);
