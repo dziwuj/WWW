@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 3</title>
+    <style>
+        #obszar{
+            width: 200px;
+            height: 300px;
+            overflow: hidden;
+        }
+        h3{
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 500px; height: 500px;">
+        <img id="piez" src="https://i.pinimg.com/736x/ae/c4/53/aec453161b2f33ffc6219d8a758307a9.jpg" alt="piez" style="width: 100px; height: 100px;">
+    </div>
+    <br/>
+    <br/>
+    <input id="kreci" type="text" value="">
+    <br/>
+    <br/>
+    <h3>Punkty lecą z nieba ?!</h3>
+    <textarea id="obszar" ></textarea>
+    <br/>
+    <br/>
+    <div style="width: 500px; height: 500px;">
+        <img id="kotek" src="https://thumbs.gfycat.com/HighSnivelingIberiannase-max-1mb.gif" alt="kotek" style="width: 200px; height: 200px; position: absolute;">
+    </div>
+    <script>
+
+        var x = 100;
+        var maly = null;
+        var duzy = null;
+        var wyznacznik = true;
+ 
+        function rozmiar() {
+            if(x<100){
+                wyznacznik = true;   
+            }else if(x>500){
+                wyznacznik = false;
+            }
+
+            piez = document.getElementById("piez");
+            piez.style.height = x+"px";
+            piez.style.width = x+"px";
+
+            if(wyznacznik==true){
+                x+=2;
+            }else{
+                x-=2;
+            };
+        };
+
+        wielkosc = setInterval(rozmiar, 20);
+
+///////////////////////////////////////////////////////
+
+        var tab = ['T','o',' ','s','i','ę',' ','b','a','r','d','z','o',' ','s','z','y','b','k','o',' ','k','r','ę','c','i','!', ' ', ' '];
+
+        function tekst (){
+            tab.unshift(tab.pop());
+            ciong = tab.toString();
+            ciong = ciong.split(",").join("");
+            document.getElementById("kreci").value = ciong;
+        };
+
+        obraca = setInterval(tekst, 100);
+
+///////////////////////////////////////////////////////
+        
+        var tab2 = ['    1p. Siódmy punkt \n', '    1p. Szósty punkt \n', '    1p. Piąty punkt \n', '    1p. Czwarty punkt \n', '    1p. Trzeci punkt \n', '    1p. Drugi punkt \n', '    1p. Pierwszy punkt \n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n'];
+
+        function sciana (){
+            tab2.unshift(tab2.pop());
+            str = tab2.toString();
+            str = str.split(",").join("");
+            document.getElementById("obszar").value = str;
+        };
+
+        spada = setInterval(sciana, 150);
+
+///////////////////////////////////////////////////////
+
+        var obrot = Math.PI;
+
+        function krenci(){
+            document.getElementById("kotek").style.top = 1120 + Math.sin(obrot) * 150+"px";
+            document.getElementById("kotek").style.left = 300 + Math.cos(obrot) * 150+"px";
+
+            obrot += 0.01;
+        };
+
+        korba = setInterval(krenci, 10);
+
+    </script>
+</body>
+</html>
