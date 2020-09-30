@@ -21,7 +21,7 @@
     </div>
     <br/>
     <br/>
-    <input id="kreci" type="text" value="" style="direction: rtl;">
+    <input id="kreci" type="text" value="">
     <br/>
     <br/>
     <h3>Punkty lecą z nieba ?!</h3>
@@ -74,7 +74,7 @@
         var tab2 = ['    1p. Siódmy punkt \n', '    1p. Szósty punkt \n', '    1p. Piąty punkt \n', '    1p. Czwarty punkt \n', '    1p. Trzeci punkt \n', '    1p. Drugi punkt \n', '    1p. Pierwszy punkt \n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n', '\n'];
 
         function sciana (){
-            tab2.push(tab2.shift());
+            tab2.unshift(tab2.pop());
             str = tab2.toString();
             str = str.split(",").join("");
             document.getElementById("obszar").value = str;
