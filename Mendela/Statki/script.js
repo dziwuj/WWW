@@ -289,6 +289,7 @@ function postaw(e) {
                     if (zmienna == 0) {
                         var element = document.getElementsByClassName("chosen")
                         element[0].remove(this);
+                        liczba_postawionych++
 
                         for (var j = parseInt(gracz_y) - 1; j <= parseInt(gracz_y) + 1; j++) {
                             for (var k = parseInt(gracz_x) - 1; k <= parseInt(gracz_x) + dlugosc; k++) {
@@ -312,6 +313,7 @@ function postaw(e) {
                     if (zmienna == 0) {
                         var element = document.getElementsByClassName("chosen")
                         element[0].remove(this);
+                        liczba_postawionych++
 
                         for (var j = parseInt(gracz_y) - 1; j <= parseInt(gracz_y) + 1; j++) {
                             for (var k = parseInt(gracz_x) - 1; k <= parseInt(gracz_x) + dlugosc; k++) {
@@ -336,6 +338,7 @@ function postaw(e) {
                     if (zmienna == 0) {
                         var element = document.getElementsByClassName("chosen")
                         element[0].remove(this);
+                        liczba_postawionych++
 
                         for (var j = parseInt(gracz_x) - 1; j <= parseInt(gracz_x) + 1; j++) {
                             for (var k = parseInt(gracz_y) - 1; k <= parseInt(gracz_y) + dlugosc; k++) {
@@ -360,6 +363,7 @@ function postaw(e) {
                     if (zmienna == 0) {
                         var element = document.getElementsByClassName("chosen")
                         element[0].remove(this);
+                        liczba_postawionych++
 
                         for (var j = parseInt(gracz_x) - 1; j <= parseInt(gracz_x) + 1; j++) {
                             for (var k = parseInt(gracz_y) - 1; k <= parseInt(gracz_y) + dlugosc; k++) {
@@ -376,7 +380,7 @@ function postaw(e) {
                 }
             }
 
-            liczba_postawionych++
+
 
             if (liczba_postawionych == 10) {
                 var button = document.createElement("button")
