@@ -597,7 +597,7 @@ function gra(e) {
                         if (score < 19) {
                             pole_pc[numer - 1].innerHTML = ""
                             var img = document.createElement('img')
-                            img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                            img.src = "iks.png"
                             pole_pc[numer - 1].append(img)
                             img.classList.add("iks")
                             score++;
@@ -616,7 +616,7 @@ function gra(e) {
                                         if (score_pc < 19) {
                                             pole_shot[numer_shot - 1].innerHTML = ""
                                             var img = document.createElement('img')
-                                            img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                                            img.src = "iks.png"
                                             pole_shot[numer_shot - 1].append(img)
                                             img.classList.add("iks")
                                             pole_shot[numer_shot - 1].classList.add("nie")
@@ -625,7 +625,7 @@ function gra(e) {
                                         }
                                         else {
                                             var img = document.createElement('img')
-                                            img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                                            img.src = "iks.png"
                                             pole_shot[numer_shot - 1].append(img)
                                             img.classList.add("iks")
 
@@ -652,7 +652,7 @@ function gra(e) {
                         }
                         else {
                             var img = document.createElement('img')
-                            img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                            img.src = "iks.png"
                             pole_pc[numer - 1].append(img)
                             img.classList.add("iks")
 
@@ -682,7 +682,7 @@ function gra(e) {
                                     if (score_pc < 19) {
                                         pole_shot[numer_shot - 1].innerHTML = ""
                                         var img = document.createElement('img')
-                                        img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                                        img.src = "iks.png"
                                         pole_shot[numer_shot - 1].append(img)
                                         img.classList.add("iks")
                                         pole_shot[numer_shot - 1].classList.add("nie")
@@ -691,7 +691,7 @@ function gra(e) {
                                     }
                                     else {
                                         var img = document.createElement('img')
-                                        img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                                        img.src = "iks.png"
                                         pole_shot[numer_shot - 1].append(img)
                                         img.classList.add("iks")
 
