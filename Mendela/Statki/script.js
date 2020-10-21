@@ -579,28 +579,101 @@ function gra(e) {
                 var game_x = e.currentTarget.dataset.x
                 var game_y = e.currentTarget.dataset.y
 
-                x_shot = randomInt(1, 11);
-                y_shot = randomInt(1, 11);
+                var x_shot = 0;
+                var y_shot = 0;
 
                 var numer = ((parseInt(game_y) * 10) - 10) + parseInt(game_x)
-                var numer_shot = ((y_shot * 10) - 10) + x_shot
+                var numer_shot = 0;
 
                 var pole_pc = document.getElementsByClassName("pc")
                 var pole_shot = document.getElementsByClassName("empty")
 
-                if (pole_pc[numer - 1].classList.contains("pelny") && pole_pc[numer - 1].classList.contains("nie") == false) {
-                    if (score < 19) {
-                        pole_pc[numer - 1].innerHTML = ""
-                        var img = document.createElement('img')
-                        img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
-                        pole_pc[numer - 1].append(img)
-                        img.classList.add("iks")
-                        score++;
-                        pole_pc[numer - 1].classList.add("nie")
+                if (pole_pc[numer - 1].innerHTML == "") {
+                    if (pole_pc[numer - 1].classList.contains("pelny") && pole_pc[numer - 1].classList.contains("nie") == false) {
+                        if (score < 19) {
+                            pole_pc[numer - 1].innerHTML = ""
+                            var img = document.createElement('img')
+                            img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                            pole_pc[numer - 1].append(img)
+                            img.classList.add("iks")
+                            score++;
+                            console.log("moje pkt : " + score)
+                            pole_pc[numer - 1].classList.add("nie")
 
+                            setTimeout(function losuj() {
+                                var niewiadoma = 0;
+                                while (niewiadoma == 0) {
+
+                                    x_shot = randomInt(1, 11);
+                                    y_shot = randomInt(1, 11);
+                                    numer_shot = ((y_shot * 10) - 10) + x_shot
+
+                                    if (pole_shot[numer_shot - 1].classList.contains("stoi") && pole_shot[numer_shot - 1].classList.contains("nie") == false) {
+                                        if (score_pc < 19) {
+                                            pole_shot[numer_shot - 1].innerHTML = ""
+                                            var img = document.createElement('img')
+                                            img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                                            pole_shot[numer_shot - 1].append(img)
+                                            img.classList.add("iks")
+                                            pole_shot[numer_shot - 1].classList.add("nie")
+                                            score_pc++;
+                                            niewiadoma++;
+                                        }
+                                        else {
+                                            var img = document.createElement('img')
+                                            img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                                            pole_shot[numer_shot - 1].append(img)
+                                            img.classList.add("iks")
+
+                                            var button = document.createElement("button")
+                                            document.getElementById("guzior").append(button)
+                                            button.classList.add("restart")
+                                            button.innerHTML = "Reset"
+                                            button.onclick = reset
+                                            alert("przegrałeś")
+                                            niewiadoma++;
+                                        }
+                                    }
+                                    else if (pole_shot[numer_shot - 1].classList.contains("nie") == false) {
+                                        pole_shot[numer_shot - 1].innerHTML = ""
+                                        var img = document.createElement('img')
+                                        img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/600px-Location_dot_black.svg.png"
+                                        pole_shot[numer_shot - 1].append(img)
+                                        img.classList.add("kolo")
+                                        pole_shot[numer_shot - 1].classList.add("nie")
+                                        niewiadoma++;
+                                    }
+                                }
+                            }, 500)
+                        }
+                        else {
+                            var img = document.createElement('img')
+                            img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
+                            pole_pc[numer - 1].append(img)
+                            img.classList.add("iks")
+
+                            var button = document.createElement("button")
+                            document.getElementById("guzior").append(button)
+                            button.classList.add("restart")
+                            button.innerHTML = "Reset"
+                            button.onclick = reset
+                            alert("wygrałeś")
+                        }
+                    }
+                    else if (pole_pc[numer - 1].classList.contains("pusty") && pole_pc[numer - 1].classList.contains("nie") == false) {
+
+                        var img = document.createElement('img')
+                        img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/600px-Location_dot_black.svg.png"
+                        pole_pc[numer - 1].append(img)
+                        img.classList.add("kolo")
                         setTimeout(function losuj() {
                             var niewiadoma = 0;
                             while (niewiadoma == 0) {
+
+                                x_shot = randomInt(1, 11);
+                                y_shot = randomInt(1, 11);
+                                numer_shot = ((y_shot * 10) - 10) + x_shot
+
                                 if (pole_shot[numer_shot - 1].classList.contains("stoi") && pole_shot[numer_shot - 1].classList.contains("nie") == false) {
                                     if (score_pc < 19) {
                                         pole_shot[numer_shot - 1].innerHTML = ""
@@ -639,60 +712,6 @@ function gra(e) {
                             }
                         }, 500)
                     }
-                    else {
-                        var img = document.createElement('img')
-                        img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
-                        pole_pc[numer - 1].append(img)
-                        img.classList.add("iks")
-
-                        var button = document.createElement("button")
-                        document.getElementById("guzior").append(button)
-                        button.classList.add("restart")
-                        button.innerHTML = "Reset"
-                        button.onclick = reset
-                        alert("wygrałeś")
-                    }
-                }
-                else if (pole_pc[numer - 1].classList.contains("pusty") && pole_pc[numer - 1].classList.contains("nie") == false) {
-
-                    var img = document.createElement('img')
-                    img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/600px-Location_dot_black.svg.png"
-                    pole_pc[numer - 1].append(img)
-                    img.classList.add("kolo")
-                    setTimeout(function () {
-                        if (pole_shot[numer_shot - 1].classList.contains("stoi") && pole_shot[numer_shot - 1].classList.contains("nie") == false) {
-                            if (score_pc < 19) {
-                                pole_shot[numer_shot - 1].innerHTML = ""
-                                var img = document.createElement('img')
-                                img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
-                                pole_shot[numer_shot - 1].append(img)
-                                img.classList.add("iks")
-                                score_pc++;
-                                pole_shot[numer_shot - 1].classList.add("nie")
-
-                            }
-                            else {
-                                var img = document.createElement('img')
-                                img.src = "https://lh3.googleusercontent.com/proxy/0WwEhWrc3shehjOyLaUW5j1zJLj_Rmkn8LnbXMsY3MhPJvM6WvAPnkzPewFH2STf2dRnem6XwWb8c1AXwe0y-acSAYQtRrSMEXzXODRQidhJ2vrn0VOw7SIj9LnfjMZdzlWWKjPriu5QXfigB9LU"
-                                pole_shot[numer_shot - 1].append(img)
-                                img.classList.add("iks")
-
-                                var button = document.createElement("button")
-                                document.getElementById("guzior").append(button)
-                                button.classList.add("restart")
-                                button.innerHTML = "Reset"
-                                button.onclick = reset
-                                alert("przegrałeś")
-                            }
-                        }
-                        else if (pole_shot[numer_shot - 1].classList.contains("nie") == false) {
-
-                            var img = document.createElement('img')
-                            img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/600px-Location_dot_black.svg.png"
-                            pole_shot[numer_shot - 1].append(img)
-                            img.classList.add("kolo")
-                        }
-                    }, 500)
                 }
 
                 break;
