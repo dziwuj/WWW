@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click & Slide</title>
+    <script defer src="skrypt.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+    <link href="https://cdn3.iconfinder.com/data/icons/brain-games/1042/Puzzle-grey.png" rel="icon"
+        type="image/x-icon" />
+</head>
+
+<body>
+    <div id="obraz">
+    </div>
+    <div id="menu">
+        <button class="guziczki" onclick="start(3)">3x3</button>
+        <button class="guziczki" onclick="start(4)">4x4</button>
+        <button class="guziczki" onclick="start(5)">5x5</button>
+        <button class="guziczki" onclick="start(6)">6x6</button>
+    </div>
+    <div id="czas">
+        <div id="h1" class="numer"></div>
+        <div id="h2" class="numer"></div>
+        <div class="colon"></div>
+        <div id="m1" class="numer"></div>
+        <div id="m2" class="numer"></div>
+        <div class="colon"></div>
+        <div id="s1" class="numer"></div>
+        <div id="s2" class="numer"></div>
+        <div class="dot"></div>
+        <div id="ms1" class="numer"></div>
+        <div id="ms2" class="numer"></div>
+        <div id="ms3" class="numer"></div>
+    </div>
+    <div id="dzielenie">
+
+    </div>
+    <div class="środek">
+        <form action="#">
+            <select id="opcja" name="opcja">
+                <option value="3x3">3x3</option>
+                <option value="4x4">4x4</option>
+                <option value="5x5">5x5</option>
+                <option value="6x6">6x6</option>
+            </select><br><br>
+            <input id="bt_score" onclick="score_board()" type="submit" value="Sala chwały"></input>
+        </form>
+    </div>
+</body>
+
+</html>
