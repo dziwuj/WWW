@@ -396,23 +396,26 @@ function score_board() {
 
             for (let i = 0; i < rekordy.length; i++) {
                 if (rekordy[i].tryb == "3x3") {
-                    let row = table.insertRow();
-                    let cell = row.insertCell();
-                    let text = document.createTextNode(reward)
-                    cell.classList.add("glitch")
-                    cell.setAttribute("data-text", reward)
-                    cell.appendChild(text);
-                    let cell2 = row.insertCell();
-                    let text2 = document.createTextNode(rekordy[i].nick)
-                    cell2.classList.add("glitch")
-                    cell2.setAttribute("data-text", rekordy[i].nick)
-                    cell2.appendChild(text2);
-                    let cell3 = row.insertCell();
-                    let text3 = document.createTextNode(rekordy[i].czas)
-                    cell3.classList.add("glitch")
-                    cell3.setAttribute("data-text", rekordy[i].czas)
-                    cell3.appendChild(text3)
-                    reward++
+                    for (let j = 0; j < 10; j++) {
+                        let row = table.insertRow();
+                        let cell = row.insertCell();
+                        let text = document.createTextNode(reward)
+                        cell.classList.add("glitch")
+                        cell.setAttribute("data-text", reward)
+                        cell.appendChild(text);
+                        let cell2 = row.insertCell();
+                        let text2 = document.createTextNode(rekordy[i].nick)
+                        cell2.classList.add("glitch")
+                        cell2.setAttribute("data-text", rekordy[i].nick)
+                        cell2.appendChild(text2);
+                        let cell3 = row.insertCell();
+                        let text3 = document.createTextNode(rekordy[i].czas)
+                        cell3.classList.add("glitch")
+                        cell3.setAttribute("data-text", rekordy[i].czas)
+                        cell3.appendChild(text3)
+                        reward++
+                    }
+
                 }
             }
 
@@ -420,23 +423,25 @@ function score_board() {
 
             for (let i = 0; i < rekordy.length; i++) {
                 if (rekordy[i].tryb == "4x4") {
-                    let row = table.insertRow();
-                    let cell = row.insertCell();
-                    let text = document.createTextNode(reward)
-                    cell.classList.add("glitch")
-                    cell.setAttribute("data-text", reward)
-                    cell.appendChild(text);
-                    let cell2 = row.insertCell();
-                    let text2 = document.createTextNode(rekordy[i].nick)
-                    cell2.classList.add("glitch")
-                    cell2.setAttribute("data-text", rekordy[i].nick)
-                    cell2.appendChild(text2);
-                    let cell3 = row.insertCell();
-                    let text3 = document.createTextNode(rekordy[i].czas)
-                    cell3.classList.add("glitch")
-                    cell3.setAttribute("data-text", rekordy[i].czas)
-                    cell3.appendChild(text3)
-                    reward++
+                    for (let j = 0; j < 10; j++) {
+                        let row = table.insertRow();
+                        let cell = row.insertCell();
+                        let text = document.createTextNode(reward)
+                        cell.classList.add("glitch")
+                        cell.setAttribute("data-text", reward)
+                        cell.appendChild(text);
+                        let cell2 = row.insertCell();
+                        let text2 = document.createTextNode(rekordy[i].nick)
+                        cell2.classList.add("glitch")
+                        cell2.setAttribute("data-text", rekordy[i].nick)
+                        cell2.appendChild(text2);
+                        let cell3 = row.insertCell();
+                        let text3 = document.createTextNode(rekordy[i].czas)
+                        cell3.classList.add("glitch")
+                        cell3.setAttribute("data-text", rekordy[i].czas)
+                        cell3.appendChild(text3)
+                        reward++
+                    }
                 }
             }
 
@@ -444,23 +449,25 @@ function score_board() {
 
             for (let i = 0; i < rekordy.length; i++) {
                 if (rekordy[i].tryb == "5x5") {
-                    let row = table.insertRow();
-                    let cell = row.insertCell();
-                    let text = document.createTextNode(reward)
-                    cell.classList.add("glitch")
-                    cell.setAttribute("data-text", reward)
-                    cell.appendChild(text);
-                    let cell2 = row.insertCell();
-                    let text2 = document.createTextNode(rekordy[i].nick)
-                    cell2.classList.add("glitch")
-                    cell2.setAttribute("data-text", rekordy[i].nick)
-                    cell2.appendChild(text2);
-                    let cell3 = row.insertCell();
-                    let text3 = document.createTextNode(rekordy[i].czas)
-                    cell3.classList.add("glitch")
-                    cell3.setAttribute("data-text", rekordy[i].czas)
-                    cell3.appendChild(text3)
-                    reward++
+                    for (let j = 0; j < 10; j++) {
+                        let row = table.insertRow();
+                        let cell = row.insertCell();
+                        let text = document.createTextNode(reward)
+                        cell.classList.add("glitch")
+                        cell.setAttribute("data-text", reward)
+                        cell.appendChild(text);
+                        let cell2 = row.insertCell();
+                        let text2 = document.createTextNode(rekordy[i].nick)
+                        cell2.classList.add("glitch")
+                        cell2.setAttribute("data-text", rekordy[i].nick)
+                        cell2.appendChild(text2);
+                        let cell3 = row.insertCell();
+                        let text3 = document.createTextNode(rekordy[i].czas)
+                        cell3.classList.add("glitch")
+                        cell3.setAttribute("data-text", rekordy[i].czas)
+                        cell3.appendChild(text3)
+                        reward++
+                    }
                 }
             }
 
@@ -468,23 +475,25 @@ function score_board() {
 
             for (let i = 0; i < rekordy.length; i++) {
                 if (rekordy[i].tryb == "6x6") {
-                    let row = table.insertRow();
-                    let cell = row.insertCell();
-                    let text = document.createTextNode(reward)
-                    cell.classList.add("glitch")
-                    cell.setAttribute("data-text", reward)
-                    cell.appendChild(text);
-                    let cell2 = row.insertCell();
-                    let text2 = document.createTextNode(rekordy[i].nick)
-                    cell2.classList.add("glitch")
-                    cell2.setAttribute("data-text", rekordy[i].nick)
-                    cell2.appendChild(text2);
-                    let cell3 = row.insertCell();
-                    let text3 = document.createTextNode(rekordy[i].czas)
-                    cell3.classList.add("glitch")
-                    cell3.setAttribute("data-text", rekordy[i].czas)
-                    cell3.appendChild(text3)
-                    reward++
+                    for (let j = 0; j < 10; j++) {
+                        let row = table.insertRow();
+                        let cell = row.insertCell();
+                        let text = document.createTextNode(reward)
+                        cell.classList.add("glitch")
+                        cell.setAttribute("data-text", reward)
+                        cell.appendChild(text);
+                        let cell2 = row.insertCell();
+                        let text2 = document.createTextNode(rekordy[i].nick)
+                        cell2.classList.add("glitch")
+                        cell2.setAttribute("data-text", rekordy[i].nick)
+                        cell2.appendChild(text2);
+                        let cell3 = row.insertCell();
+                        let text3 = document.createTextNode(rekordy[i].czas)
+                        cell3.classList.add("glitch")
+                        cell3.setAttribute("data-text", rekordy[i].czas)
+                        cell3.appendChild(text3)
+                        reward++
+                    }
                 }
             }
 
