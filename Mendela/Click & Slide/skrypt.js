@@ -392,11 +392,14 @@ function score_board() {
         }
     }
     function generateTable(table) {
+
+        var ilość = 0;
+
         if (wybrany == "3x3") {
 
             for (let i = 0; i < rekordy.length; i++) {
                 if (rekordy[i].tryb == "3x3") {
-                    for (let j = 0; j < 10; j++) {
+                    if (ilość < 10) {
                         let row = table.insertRow();
                         let cell = row.insertCell();
                         let text = document.createTextNode(reward)
@@ -414,8 +417,8 @@ function score_board() {
                         cell3.setAttribute("data-text", rekordy[i].czas)
                         cell3.appendChild(text3)
                         reward++
+                        ilość++
                     }
-
                 }
             }
 
@@ -423,7 +426,7 @@ function score_board() {
 
             for (let i = 0; i < rekordy.length; i++) {
                 if (rekordy[i].tryb == "4x4") {
-                    for (let j = 0; j < 10; j++) {
+                    if (ilość < 10) {
                         let row = table.insertRow();
                         let cell = row.insertCell();
                         let text = document.createTextNode(reward)
@@ -441,6 +444,7 @@ function score_board() {
                         cell3.setAttribute("data-text", rekordy[i].czas)
                         cell3.appendChild(text3)
                         reward++
+                        ilość++
                     }
                 }
             }
@@ -449,7 +453,7 @@ function score_board() {
 
             for (let i = 0; i < rekordy.length; i++) {
                 if (rekordy[i].tryb == "5x5") {
-                    for (let j = 0; j < 10; j++) {
+                    if (ilość < 10) {
                         let row = table.insertRow();
                         let cell = row.insertCell();
                         let text = document.createTextNode(reward)
@@ -467,6 +471,7 @@ function score_board() {
                         cell3.setAttribute("data-text", rekordy[i].czas)
                         cell3.appendChild(text3)
                         reward++
+                        ilość++
                     }
                 }
             }
@@ -475,7 +480,7 @@ function score_board() {
 
             for (let i = 0; i < rekordy.length; i++) {
                 if (rekordy[i].tryb == "6x6") {
-                    for (let j = 0; j < 10; j++) {
+                    if (ilość < 10) {
                         let row = table.insertRow();
                         let cell = row.insertCell();
                         let text = document.createTextNode(reward)
@@ -493,6 +498,7 @@ function score_board() {
                         cell3.setAttribute("data-text", rekordy[i].czas)
                         cell3.appendChild(text3)
                         reward++
+                        ilość++
                     }
                 }
             }
