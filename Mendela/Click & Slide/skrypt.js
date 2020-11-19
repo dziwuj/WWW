@@ -121,17 +121,18 @@ function slide(wrapper, items, prev, next) {
         allowShift = true;
 
         var ustawienie = document.getElementById("slides").style.left
+        console.log(ustawienie)
 
         switch (ustawienie) {
             case '-200px':
                 obrazek = "https://st2.depositphotos.com/6074680/12451/v/600/depositphotos_124518916-stock-illustration-retro-futuristic-background-1980s-style.jpg"
                 break;
 
-            case '-399px':
+            case '-400px':
                 obrazek = "https://st3.depositphotos.com/14178046/18544/v/600/depositphotos_185445210-stock-illustration-set-of-retro-80-synthwave.jpg"
                 break;
 
-            case '-599px':
+            case '-600px':
                 obrazek = "https://st4.depositphotos.com/5857850/24567/v/600/depositphotos_245672022-stock-illustration-synthwave-retro-futuristic-landscape-with.jpg"
                 break;
         }
