@@ -13,57 +13,58 @@
 </head>
 
 <body>
-    <div id="obraz">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img
-                    src="https://st2.depositphotos.com/6074680/12451/v/600/depositphotos_124518916-stock-illustration-retro-futuristic-background-1980s-style.jpg">
+    <div id="slider" class="slider">
+        <div class="wrapper">
+            <div id="slides" class="slides" style="left: -200px">
+                <div class="slide" style="background: url('https://st2.depositphotos.com/6074680/12451/v/600/depositphotos_124518916-stock-illustration-retro-futuristic-background-1980s-style.jpg');background-size: 100%;
+                    background-repeat: no-repeat;">
+                </div>
+                <div class="slide" style="background: url('https://st3.depositphotos.com/14178046/18544/v/600/depositphotos_185445210-stock-illustration-set-of-retro-80-synthwave.jpg');background-size: 100%;
+                    background-repeat: no-repeat;">
+                </div>
+                <div class="slide" style=" background: url('https://st4.depositphotos.com/5857850/24567/v/600/depositphotos_245672022-stock-illustration-synthwave-retro-futuristic-landscape-with.jpg');background-size: 100%;
+                    background-repeat: no-repeat;">
+                </div>
             </div>
-            <div class="mySlides fade">
-                <img
-                    src="https://st3.depositphotos.com/14178046/18544/v/600/depositphotos_185445210-stock-illustration-set-of-retro-80-synthwave.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img
-                    src="https://st4.depositphotos.com/5857850/24567/v/600/depositphotos_245672022-stock-illustration-synthwave-retro-futuristic-landscape-with.jpg">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <a id="prev" class="control prev"></a>
+        <a id="next" class="control next"></a>
     </div>
-    <div id="menu">
-        <button class="guziczki" onclick="start(3)">3x3</button>
-        <button class="guziczki" onclick="start(4)">4x4</button>
-        <button class="guziczki" onclick="start(5)">5x5</button>
-        <button class="guziczki" onclick="start(6)">6x6</button>
-    </div>
-    <div id="czas">
-        <div id="h1" class="numer"></div>
-        <div id="h2" class="numer"></div>
-        <div class="colon"></div>
-        <div id="m1" class="numer"></div>
-        <div id="m2" class="numer"></div>
-        <div class="colon"></div>
-        <div id="s1" class="numer"></div>
-        <div id="s2" class="numer"></div>
-        <div class="dot"></div>
-        <div id="ms1" class="numer"></div>
-        <div id="ms2" class="numer"></div>
-        <div id="ms3" class="numer"></div>
-    </div>
-    <div id="dzielenie">
+    <div class="reszta">
+        <div id="menu">
+            <button class="guziczki" onclick="start(3)">3x3</button>
+            <button class="guziczki" onclick="start(4)">4x4</button>
+            <button class="guziczki" onclick="start(5)">5x5</button>
+            <button class="guziczki" onclick="start(6)">6x6</button>
+        </div>
+        <div id="czas">
+            <div id="h1" class="numer"></div>
+            <div id="h2" class="numer"></div>
+            <div class="colon"></div>
+            <div id="m1" class="numer"></div>
+            <div id="m2" class="numer"></div>
+            <div class="colon"></div>
+            <div id="s1" class="numer"></div>
+            <div id="s2" class="numer"></div>
+            <div class="dot"></div>
+            <div id="ms1" class="numer"></div>
+            <div id="ms2" class="numer"></div>
+            <div id="ms3" class="numer"></div>
+        </div>
+        <div id="dzielenie">
 
-    </div>
-    <div class="środek">
-        <form action="#">
-            <select id="opcja" name="opcja">
-                <option value="3x3">3x3</option>
-                <option value="4x4">4x4</option>
-                <option value="5x5">5x5</option>
-                <option value="6x6">6x6</option>
-            </select><br><br>
-            <input id="bt_score" onclick="score_board()" type="submit" value="Sala chwały"></input>
-        </form>
+        </div>
+        <div class="środek">
+            <form action="#">
+                <select id="opcja" name="opcja">
+                    <option value="3x3">3x3</option>
+                    <option value="4x4">4x4</option>
+                    <option value="5x5">5x5</option>
+                    <option value="6x6">6x6</option>
+                </select><br><br>
+                <input id="bt_score" onclick="score_board()" type="submit" value="Sala chwały"></input>
+            </form>
+        </div>
     </div>
 </body>
 

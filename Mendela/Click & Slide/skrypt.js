@@ -1,39 +1,145 @@
 var intervalek = setInterval(0)
 let tryb = ""
 let rekordy = []
-var obrazek = ""
+var obrazek = "https://st2.depositphotos.com/6074680/12451/v/600/depositphotos_124518916-stock-illustration-retro-futuristic-background-1980s-style.jpg"
 if (!!document.cookie)
     rekordy = JSON.parse(document.cookie)
 
-var slideIndex = 1;
-showSlides(slideIndex);
+var slider = document.getElementById('slider'),
+    sliderItems = document.getElementById('slides'),
+    prev = document.getElementById('prev'),
+    next = document.getElementById('next');
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+function slide(wrapper, items, prev, next) {
+    var posX1 = 0,
+        posX2 = 0,
+        posInitial,
+        posFinal,
+        threshold = 100,
+        slides = items.getElementsByClassName('slide'),
+        slidesLength = slides.length,
+        slideSize = items.getElementsByClassName('slide')[0].offsetWidth,
+        firstSlide = slides[0],
+        lastSlide = slides[slidesLength - 1],
+        cloneFirst = firstSlide.cloneNode(true),
+        cloneLast = lastSlide.cloneNode(true),
+        index = 0,
+        allowShift = true;
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+    // Clone first and last slide
+    items.appendChild(cloneFirst);
+    items.insertBefore(cloneLast, firstSlide);
+    wrapper.classList.add('loaded');
 
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    if (n == undefined) { n = ++slideIndex }
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[i].classList.remove("wybrany")
+    // Mouse events
+    items.onmousedown = dragStart;
+
+    // Touch events
+    items.addEventListener('touchstart', dragStart);
+    items.addEventListener('touchend', dragEnd);
+    items.addEventListener('touchmove', dragAction);
+
+    // Click events
+    prev.addEventListener('click', function () { shiftSlide(-1) });
+    next.addEventListener('click', function () { shiftSlide(1) });
+
+    // Transition events
+    items.addEventListener('transitionend', checkIndex);
+
+    function dragStart(e) {
+        e = e || window.event;
+        e.preventDefault();
+        posInitial = items.offsetLeft;
+
+        if (e.type == 'touchstart') {
+            posX1 = e.touches[0].clientX;
+        } else {
+            posX1 = e.clientX;
+            document.onmouseup = dragEnd;
+            document.onmousemove = dragAction;
+        }
     }
-    slides[slideIndex - 1].style.display = "block";
-    slides[slideIndex - 1].classList.add("wybrany")
-    var wybraniec = document.querySelector(".wybrany")
 
-    var imag = wybraniec.getElementsByTagName('img')
+    function dragAction(e) {
+        e = e || window.event;
 
-    obrazek = imag[0].getAttribute('src')
+        if (e.type == 'touchmove') {
+            posX2 = posX1 - e.touches[0].clientX;
+            posX1 = e.touches[0].clientX;
+        } else {
+            posX2 = posX1 - e.clientX;
+            posX1 = e.clientX;
+        }
+        items.style.left = (items.offsetLeft - posX2) + "px";
+    }
+
+    function dragEnd(e) {
+        posFinal = items.offsetLeft;
+        if (posFinal - posInitial < -threshold) {
+            shiftSlide(1, 'drag');
+        } else if (posFinal - posInitial > threshold) {
+            shiftSlide(-1, 'drag');
+        } else {
+            items.style.left = (posInitial) + "px";
+        }
+
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+
+    function shiftSlide(dir, action) {
+        items.classList.add('shifting');
+
+        if (allowShift) {
+            if (!action) { posInitial = items.offsetLeft; }
+
+            if (dir == 1) {
+                items.style.left = (posInitial - slideSize) + "px";
+                index++;
+            } else if (dir == -1) {
+                items.style.left = (posInitial + slideSize) + "px";
+                index--;
+            }
+        };
+
+        allowShift = false;
+    }
+
+    function checkIndex() {
+        items.classList.remove('shifting');
+
+        if (index == -1) {
+            items.style.left = -(slidesLength * slideSize) + "px";
+            index = slidesLength - 1;
+        }
+
+        if (index == slidesLength) {
+            items.style.left = -(1 * slideSize) + "px";
+            index = 0;
+        }
+
+        allowShift = true;
+
+        var ustawienie = document.getElementById("slides").style.left
+
+        switch (ustawienie) {
+            case '-200px':
+                obrazek = "https://st2.depositphotos.com/6074680/12451/v/600/depositphotos_124518916-stock-illustration-retro-futuristic-background-1980s-style.jpg"
+                break;
+
+            case '-399px':
+                obrazek = "https://st3.depositphotos.com/14178046/18544/v/600/depositphotos_185445210-stock-illustration-set-of-retro-80-synthwave.jpg"
+                break;
+
+            case '-599px':
+                obrazek = "https://st4.depositphotos.com/5857850/24567/v/600/depositphotos_245672022-stock-illustration-synthwave-retro-futuristic-landscape-with.jpg"
+                break;
+        }
+    }
+
 }
+
+slide(slider, sliderItems, prev, next);
 
 class Gra {
     płytki = []
@@ -85,6 +191,10 @@ class Gra {
             var min = Math.floor(sek / 60)
             var godz = Math.floor(min / 60)
 
+            sek = sek % 60
+
+            min = min % 60
+
             godz = godz.toString()
             min = min.toString()
             sek = sek.toString()
@@ -101,7 +211,6 @@ class Gra {
             sek = sek.substring(sek.length - 2, sek.length)
             milisek = milisek.substring(milisek.length - 3, milisek.length)
 
-            sek = sek % 60
 
             var nick = ""
 

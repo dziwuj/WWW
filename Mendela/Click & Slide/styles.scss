@@ -213,43 +213,87 @@ h1{
   animation:noise-anim-2 3s infinite linear alternate-reverse;
 }
 
-.mySlides {
-  display: none;
-}
+$slider-width: 200px;
+$slider-height: 200px;
 
-.mySlides>img{
-  width: 200px;
-  height: 200px;
-}
-
-.prev, .next {
-  cursor: pointer;
+.slider {
   position: absolute;
-  width: auto;
-  padding: 16px;
-  top: 50px;
-  color:rgba(255,183,100,1);
-  font-weight: bold;
-  font-size: 50px;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-    -moz-user-select: none;
-      -ms-user-select: none;
-        user-select: none;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $slider-width;
+  height: $slider-height;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+}
+
+.wrapper {
+  overflow: hidden;
+  width: $slider-width;
+  height: $slider-height;
+  z-index: 1;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: -$slider-width;
+  width: 10000px;
+}
+
+.slides.shifting {
+  transition: left .2s ease-out;
+}
+
+.slide {
+  width: $slider-width;
+  height: $slider-height;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+  position: relative;
+  border-radius: 2px;
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background: rgba(255,183,100,1);
+  border-radius: 50px;
+  margin-top: -20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.prev,
+.next {
+  background-size: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .prev {
-  left: 50%;
-  margin-left: -220px;
-}
-.next {
-  left: 50%;
-  margin-left: 150px;
-  border-radius: 3px 0 0 3px;
+  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+  left: -20px;
 }
 
-.prev:hover, .next:hover {
-  color: rgba(207,0,39,1);
+.next {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+  right: -20px;
+}
+
+.prev:active,
+.next:active {
+  transform: scale(.8);
+}
+
+.reszta{
+  position: absolute;
+  top: 300px;
+  left: 30%;
 }
