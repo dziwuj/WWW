@@ -8,9 +8,8 @@ body{
     width: 200px;
     height: 200px;
     margin: 0 auto;
-    background-image: url("https://st2.depositphotos.com/6074680/12451/v/600/depositphotos_124518916-stock-illustration-retro-futuristic-background-1980s-style.jpg");
-    background-size: 100%;
 }
+
 #menu{
     margin: 10px auto;
     width: 700px;
@@ -212,4 +211,45 @@ h1{
   overflow:hidden;
   clip:rect(0,900px,0,0); 
   animation:noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides>img{
+  width: 200px;
+  height: 200px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 16px;
+  top: 50px;
+  color:rgba(255,183,100,1);
+  font-weight: bold;
+  font-size: 50px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+      -ms-user-select: none;
+        user-select: none;
+}
+
+.prev {
+  left: 50%;
+  margin-left: -220px;
+}
+.next {
+  left: 50%;
+  margin-left: 150px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  color: rgba(207,0,39,1);
 }

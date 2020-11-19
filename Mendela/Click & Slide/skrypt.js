@@ -1,8 +1,39 @@
 var intervalek = setInterval(0)
 let tryb = ""
 let rekordy = []
+var obrazek = ""
 if (!!document.cookie)
     rekordy = JSON.parse(document.cookie)
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    if (n == undefined) { n = ++slideIndex }
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        slides[i].classList.remove("wybrany")
+    }
+    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1].classList.add("wybrany")
+    var wybraniec = document.querySelector(".wybrany")
+
+    var imag = wybraniec.getElementsByTagName('img')
+
+    obrazek = imag[0].getAttribute('src')
+}
 
 class Gra {
     płytki = []
@@ -30,7 +61,7 @@ class Gra {
                 this.płytki.push(div)
                 if (z == this.wymiar - 1 && y == this.wymiar - 1) {
                     this.pozycje.push({ index: this.wymiar * y + z, background: "white" })
-                } else { this.pozycje.push({ index: this.wymiar * y + z, background: "url('https://st2.depositphotos.com/6074680/12451/v/600/depositphotos_124518916-stock-illustration-retro-futuristic-background-1980s-style.jpg' ) -" + z * 600 / this.wymiar + "px -" + y * 600 / this.wymiar + "px " }) }
+                } else { this.pozycje.push({ index: this.wymiar * y + z, background: "url('" + obrazek + "') -" + z * 600 / this.wymiar + "px -" + y * 600 / this.wymiar + "px " }) }
                 div.style.height = 600 / this.wymiar + "px"
                 div.style.width = 600 / this.wymiar + "px"
             }
@@ -192,7 +223,7 @@ class Gra {
         var timer = [document.getElementById("h1"), document.getElementById("h2"), document.getElementById("m1"),
         document.getElementById("m2"), document.getElementById("s1"), document.getElementById("s2"),
         document.getElementById("ms1"), document.getElementById("ms2"), document.getElementById("ms3")]
-        //funkcja display przyjmuje jako argumenty (h,m,s,ms) liczby które obliczaliśmy przy naszym poprzednim wyświetlaczu są to kolejno godziny, minuty, sekundy i milisekudny
+        //funkcja display przyjmuje jako argumenty (h,m,s,ms) liczby które liczaliśmy przy naszym poprzednim wyświetlaczu są to kolejno godziny, minuty, sekundy i milisekudny
         function display(h, m, s, ms) {
             // liczba = liczba.toString() zamienia nam liczbę w stringa co pozwala na dostanie się do poszczególnych cyfr liczby np liczba = "123" wtedy liczba[0] to 1 itd. a kiedt liczba = 123 liczba[0] to undefined
             var h = h.toString()
