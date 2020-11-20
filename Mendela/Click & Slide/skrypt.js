@@ -1,17 +1,17 @@
-var intervalek = setInterval(0)
+let intervalek = setInterval(0)
 let tryb = ""
 let rekordy = []
-var obrazek = "https://st2.depositphotos.com/6074680/12451/v/600/depositphotos_124518916-stock-illustration-retro-futuristic-background-1980s-style.jpg"
+let obrazek = "https://st2.depositphotos.com/6074680/12451/v/600/depositphotos_124518916-stock-illustration-retro-futuristic-background-1980s-style.jpg"
 if (!!document.cookie)
     rekordy = JSON.parse(document.cookie)
 
-var slider = document.getElementById('slider'),
+let slider = document.getElementById('slider'),
     sliderItems = document.getElementById('slides'),
     prev = document.getElementById('prev'),
     next = document.getElementById('next');
 
 function slide(wrapper, items, prev, next) {
-    var posX1 = 0,
+    let posX1 = 0,
         posX2 = 0,
         posInitial,
         posFinal,
@@ -120,7 +120,7 @@ function slide(wrapper, items, prev, next) {
 
         allowShift = true;
 
-        var ustawienie = document.getElementById("slides").style.left
+        let ustawienie = document.getElementById("slides").style.left
         console.log(ustawienie)
 
         switch (ustawienie) {
@@ -161,9 +161,9 @@ class Gra {
         this.randomizer()
     }
     stworzplansze() {
-        for (var y = 0; y < this.wymiar; y++) {
-            for (var z = 0; z < this.wymiar; z++) {
-                var div = document.createElement("div")
+        for (let y = 0; y < this.wymiar; y++) {
+            for (let z = 0; z < this.wymiar; z++) {
+                let div = document.createElement("div")
                 this.dzielenie.appendChild(div)
                 this.płytki.push(div)
                 if (z == this.wymiar - 1 && y == this.wymiar - 1) {
@@ -175,7 +175,7 @@ class Gra {
         }
     }
     updateplanszy() {
-        var win = true
+        let win = true
         this.whiteIndex = null
         this.płytki.forEach((x, i) => {
             x.style.background = this.pozycje[i].background
@@ -187,13 +187,12 @@ class Gra {
         if (win && this.start) {
             clearInterval(intervalek)
             d = new Date()
-            var milisek = d.getTime() - this.czas
-            var sek = Math.floor(milisek / 1000)
-            var min = Math.floor(sek / 60)
-            var godz = Math.floor(min / 60)
+            let milisek = d.getTime() - this.czas
+            let sek = Math.floor(milisek / 1000)
+            let min = Math.floor(sek / 60)
+            let godz = Math.floor(min / 60)
 
             sek = sek % 60
-
             min = min % 60
 
             godz = godz.toString()
@@ -213,35 +212,51 @@ class Gra {
             milisek = milisek.substring(milisek.length - 3, milisek.length)
 
 
-            var nick = ""
+            let nick = ""
 
-            nick = prompt("Twój czas: \n" + godz + " : " + min + " : " + sek + " . " + milisek + "\nproszę wpisać swój nick:")
-            console.log(nick)
+            let timer = [document.getElementById("h1"), document.getElementById("h2"), document.getElementById("m1"),
+            document.getElementById("m2"), document.getElementById("s1"), document.getElementById("s2"),
+            document.getElementById("ms1"), document.getElementById("ms2"), document.getElementById("ms3")]
 
-            var odwrotny_wynik = godz + min + sek + milisek;
+            let arr = [godz[0], godz[1], min[0], min[1], sek[0], sek[1], milisek[0], milisek[1], milisek[2]]
+
+            for (let i = 0; i < arr.length; i++) {
+                timer[i].style.backgroundImage = "url('./" + arr[i] + ".png')"
+            }
+
+            function okieko() {
+
+                nick = prompt("Twój czas: \n" + godz + " : " + min + " : " + sek + " . " + milisek + "\nproszę wpisać swój nick:")
+
+                console.log(nick)
+
+                let odwrotny_wynik = godz + min + sek + milisek;
 
 
-            /////////
+                /////////
 
-            if (!!document.cookie)
-                rekordy = JSON.parse(document.cookie)
+                if (!!document.cookie)
+                    rekordy = JSON.parse(document.cookie)
 
 
-            var do_tablicy = { miejsce: 1, nick: nick, czas: godz + ":" + min + ":" + sek + ":" + milisek, odwrotny_wynik: odwrotny_wynik, tryb: tryb }
+                let do_tablicy = { miejsce: 1, nick: nick, czas: godz + ":" + min + ":" + sek + ":" + milisek, odwrotny_wynik: odwrotny_wynik, tryb: tryb }
 
-            rekordy.push(do_tablicy)
+                rekordy.push(do_tablicy)
 
-            console.log(rekordy)
+                console.log(rekordy)
 
-            rekordy.sort(function (a, b) {
-                return a.odwrotny_wynik - b.odwrotny_wynik
-            })
+                rekordy.sort(function (a, b) {
+                    return a.odwrotny_wynik - b.odwrotny_wynik
+                })
 
-            var do_ciastek = JSON.stringify(rekordy)
+                let do_ciastek = JSON.stringify(rekordy)
 
-            document.cookie = do_ciastek
+                document.cookie = do_ciastek
 
-            /////////
+                /////////
+            }
+
+            setTimeout(okieko, 20)
 
         }
         else {
@@ -250,7 +265,7 @@ class Gra {
 
     }
     polowanie() {
-        var i = 0
+        let i = 0
         while (this.whiteIndex == null) {
             if (this.pozycje[i].background == "white") {
                 this.whiteIndex = i
@@ -261,10 +276,10 @@ class Gra {
     }
     tiles() {
         this.klikable = []
-        var y = Math.floor(this.whiteIndex / this.wymiar)
-        var range = [-1, 1, -1 * this.wymiar, this.wymiar]
+        let y = Math.floor(this.whiteIndex / this.wymiar)
+        let range = [-1, 1, -1 * this.wymiar, this.wymiar]
         range.forEach(b => {
-            var newIndex = this.whiteIndex + b
+            let newIndex = this.whiteIndex + b
             if (newIndex < this.płytki.length && newIndex > -1) {
                 if ((b == 1 || b == -1) && y == Math.floor(newIndex / this.wymiar)) {
                     this.klikable.push(newIndex)
@@ -286,7 +301,7 @@ class Gra {
         })
     }
     swap(x) {
-        var tempwhite = this.pozycje[this.whiteIndex]
+        let tempwhite = this.pozycje[this.whiteIndex]
         this.pozycje[this.whiteIndex] = this.pozycje[x]
         this.pozycje[x] = tempwhite
         this.updateplanszy()
@@ -302,18 +317,18 @@ class Gra {
             d = new Date()
             this.czas = d.getTime()
         }
-        var rand = Math.floor(Math.random() * this.klikable.length)
+        let rand = Math.floor(Math.random() * this.klikable.length)
         this.swap(this.klikable[rand])
         this.ile--
     }
     ////////////////////////////////////////////////////////////////////////
     timer() {
-        var arr = []
+        let arr = []
         d = new Date()
-        var milisek = d.getTime() - this.czas
-        var sek = Math.floor(milisek / 1000)
-        var min = Math.floor(sek / 60)
-        var godz = Math.floor(min / 60)
+        let milisek = d.getTime() - this.czas
+        let sek = Math.floor(milisek / 1000)
+        let min = Math.floor(sek / 60)
+        let godz = Math.floor(min / 60)
 
         godz = godz.toString()
         min = min.toString()
@@ -325,25 +340,26 @@ class Gra {
         sek = sek.substring(sek.length - 2, sek.length)
         milisek = milisek.substring(milisek.length - 3, milisek.length)
 
+        min = min % 60
         sek = sek % 60
 
         //console.log("czas: " + godz + " : " + min + " : " + sek + " : " + milisek)
 
         // timer to array zawierający divy odpowaiadające cyfrom wyświetlacza (h1 to pierwsza cyfra godziny itd)
-        var timer = [document.getElementById("h1"), document.getElementById("h2"), document.getElementById("m1"),
+        let timer = [document.getElementById("h1"), document.getElementById("h2"), document.getElementById("m1"),
         document.getElementById("m2"), document.getElementById("s1"), document.getElementById("s2"),
         document.getElementById("ms1"), document.getElementById("ms2"), document.getElementById("ms3")]
         //funkcja display przyjmuje jako argumenty (h,m,s,ms) liczby które liczaliśmy przy naszym poprzednim wyświetlaczu są to kolejno godziny, minuty, sekundy i milisekudny
         function display(h, m, s, ms) {
             // liczba = liczba.toString() zamienia nam liczbę w stringa co pozwala na dostanie się do poszczególnych cyfr liczby np liczba = "123" wtedy liczba[0] to 1 itd. a kiedt liczba = 123 liczba[0] to undefined
-            var h = h.toString()
+            h = h.toString()
             // ten if to zabezpieczenie przed liczbami jednocyfrowymi nasz wyświetlacz 9 ma wyświetlić jako 09
             if (h.length < 2) h = "0" + h
-            var m = m.toString()
+            m = m.toString()
             if (m.length < 2) m = "0" + m
-            var s = s.toString()
+            s = s.toString()
             if (s.length < 2) s = "0" + s
-            var ms = ms.toString()
+            ms = ms.toString()
             if (ms.length < 2) ms = "0" + ms
             if (ms.length < 3) ms = "0" + ms
             h = h.substring(h.length - 2, h.length)
@@ -351,9 +367,9 @@ class Gra {
             s = s.substring(s.length - 2, s.length)
             ms = ms.substring(ms.length - 3, ms.length)
             //tworzymy array który zwiera wszystkie cyfry czsu
-            arr = [h[0], h[1], m[0], m[1], s[0], s[1], ms[0], ms[1], ms[2]]
+            let arr = [h[0], h[1], m[0], m[1], s[0], s[1], ms[0], ms[1], ms[2]]
 
-            for (var i = 0; i < arr.length; i++) {
+            for (let i = 0; i < arr.length; i++) {
                 timer[i].style.backgroundImage = "url('./" + arr[i] + ".png')"
             }
         }
@@ -361,9 +377,9 @@ class Gra {
     }
 
 }
-var gra = null
-var d = new Date()
-var starter = false
+let gra = null
+let d = new Date()
+let starter = false
 function start(x) {
     if (!starter) {
         clearInterval(intervalek)
@@ -374,9 +390,9 @@ function start(x) {
 
 function score_board() {
 
-    var e = document.getElementById("opcja")
-    var wybrany = e.value
-    var reward = 1
+    let e = document.getElementById("opcja")
+    let wybrany = e.value
+    let reward = 1
 
     document.body.innerHTML = "<button id='back' onclick='location.reload()'></button><h1 style='text-align: center' class='glitch0' data-text='REKORDY W " + wybrany + "'>REKORDY W " + wybrany + "</h1><table style='margin-left:auto; margin-right:auto;'></table>"
     function generateTableHead(table, data) {
@@ -393,7 +409,7 @@ function score_board() {
     }
     function generateTable(table) {
 
-        var ilość = 0;
+        let ilość = 0;
 
         if (wybrany == "3x3") {
 
