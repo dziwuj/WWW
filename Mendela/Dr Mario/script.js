@@ -269,12 +269,14 @@ function gra() {
                     tab[obj.y - 1][obj.x] = { x: obj.x, y: obj.y, value: 'none', lp: 0, form: '', flag: '' }
                     tab[obj.y + 1][obj.x].y++
                 } else {
+                    flaga = true;
                     zbijanie();
                     clearInterval(fall)
                     fall = setInterval(spadanie, 500)
                     down = 'up'
                 }
             } catch (err) {
+                flaga = true;
                 zbijanie();
                 clearInterval(fall)
                 fall = setInterval(spadanie, 500)
@@ -289,12 +291,14 @@ function gra() {
                     tab[obj.y - 1][obj.x] = { x: obj.x, y: obj.y, value: 'none', lp: 0, form: '', flag: '' }
                     tab[obj.y + 1][obj.x].y++
                 } else {
+                    flaga = true;
                     zbijanie();
                     clearInterval(fall)
                     fall = setInterval(spadanie, 500)
                     down = 'up'
                 }
             } catch (err) {
+                flaga = true;
                 zbijanie();
                 clearInterval(fall)
                 fall = setInterval(spadanie, 500)
@@ -310,12 +314,14 @@ function gra() {
                     tab[obj.y + 1][obj.x].y = obj.y + 1
                     tab[obj.y][obj.x + 1].y = tab[obj.y][obj.x].y
                 } else {
+                    flaga = true;
                     zbijanie();
                     clearInterval(fall)
                     fall = setInterval(spadanie, 500)
                     down = 'up'
                 }
             } catch (err) {
+                flaga = true;
                 zbijanie();
                 clearInterval(fall)
                 fall = setInterval(spadanie, 500)
@@ -755,133 +761,137 @@ function gra() {
 
 
     function zbijanie() {
-        let val = '';
-        let val2 = '';
-        let licznik = 0;
-        let val_vertical = '';
-        let val2_vertical = '';
-        let licznik_vertical = 0;
-        let poof = false
+        if (flaga) {
 
-        for (let y = 16; y >= 0; y--) {
-            for (let x = 7; x >= 0; x--) {
-                val2 = val
-                val = tab[y][x].form
-                val = val.substring(2, val.length)
-                val = val + y
+            let val = '';
+            let val2 = '';
+            let licznik = 0;
+            let val_vertical = '';
+            let val2_vertical = '';
+            let licznik_vertical = 0;
+            let poof = false
 
-                if (val == val2 && val2 != y) {
-                    licznik++;
-                } else {
-                    licznik = 0;
-                }
-
-                if (licznik >= 3) {
-                    for (let a = licznik; a >= 0; a--) {
-                        tab[y][x + a].flag = "to_kill"
-                    }
-                }
-            }
-        }
-
-        for (let x = 7; x >= 0; x--) {
             for (let y = 16; y >= 0; y--) {
-                val2_vertical = val_vertical
-                val_vertical = tab[y][x].form
-                val_vertical = val_vertical.substring(2, val_vertical.length)
-                val_vertical = val_vertical + x
+                for (let x = 7; x >= 0; x--) {
+                    val2 = val
+                    val = tab[y][x].form
+                    val = val.substring(2, val.length)
+                    val = val + y
 
-                if (val_vertical == val2_vertical && val2_vertical != x) {
-                    licznik_vertical++;
-                } else {
-                    licznik_vertical = 0;
-                }
+                    if (val == val2 && val2 != y) {
+                        licznik++;
+                    } else {
+                        licznik = 0;
+                    }
 
-                if (licznik_vertical >= 3) {
-                    for (let a = licznik_vertical; a >= 0; a--) {
-                        tab[y + a][x].flag = "to_kill"
+                    if (licznik >= 3) {
+                        for (let a = licznik; a >= 0; a--) {
+                            tab[y][x + a].flag = "to_kill"
+                        }
                     }
                 }
             }
-        }
 
-        for (let y = 16; y >= 0; y--) {
             for (let x = 7; x >= 0; x--) {
-                if (tab[y][x].flag == "to_kill" && tab[y][x].form.substring(0, 1) == "v") {
-                    let color = tab[y][x].form.substring(2, 4)
-                    let path = tab[y][x].value
-                    path = path.substring(0, 10)
-                    tab[y][x].value = path + color + "_x.png)"
-                    poof = true
+                for (let y = 16; y >= 0; y--) {
+                    val2_vertical = val_vertical
+                    val_vertical = tab[y][x].form
+                    val_vertical = val_vertical.substring(2, val_vertical.length)
+                    val_vertical = val_vertical + x
+
+                    if (val_vertical == val2_vertical && val2_vertical != x) {
+                        licznik_vertical++;
+                    } else {
+                        licznik_vertical = 0;
+                    }
+
+                    if (licznik_vertical >= 3) {
+                        for (let a = licznik_vertical; a >= 0; a--) {
+                            tab[y + a][x].flag = "to_kill"
+                        }
+                    }
                 }
-                else if (tab[y][x].flag == "to_kill") {
-                    let color = tab[y][x].form.substring(2, 4)
-                    let path = tab[y][x].value
-                    path = path.substring(0, 10)
-                    tab[y][x].value = path + color + "_o.png)"
-                    poof = true
+            }
+
+            for (let y = 16; y >= 0; y--) {
+                for (let x = 7; x >= 0; x--) {
+                    if (tab[y][x].flag == "to_kill" && tab[y][x].form.substring(0, 1) == "v") {
+                        let color = tab[y][x].form.substring(2, 4)
+                        let path = tab[y][x].value
+                        path = path.substring(0, 10)
+                        tab[y][x].value = path + color + "_x.png)"
+                        poof = true
+                    }
+                    else if (tab[y][x].flag == "to_kill") {
+                        let color = tab[y][x].form.substring(2, 4)
+                        let path = tab[y][x].value
+                        path = path.substring(0, 10)
+                        tab[y][x].value = path + color + "_o.png)"
+                        poof = true
+                    }
+                }
+            }
+
+            if (poof) {
+                poof = false;
+                grawitacja = setInterval(gravity, 200)
+            } else {
+                if (grawitacja == false && bezpiecznik == true) {
+                    rzut = setInterval(dr, speed)
+                    bezpiecznik = false
                 }
             }
         }
-
-        if (poof) {
-            poof = false;
-            grawitacja = setInterval(gravity, 200)
-        }
-
-        if (!grawitacja && bezpiecznik == true) {
-            rzut = setInterval(dr, speed)
-            bezpiecznik = false
-        }
-
-
-
-
 
     }
 
     function gravity() {
 
-        for (let y = 16; y >= 0; y--) {
-            for (let x = 7; x >= 0; x--) {
-                if (tab[y][x].flag == "to_kill" && tab[y][x].form.substring(0, 1) == "v") {
-                    wynik = parseInt(wynik)
-                    wynik += 100
-                    tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
-                }
-                else if (tab[y][x].flag == "to_kill") {
-                    tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
-                }
-            }
-        }
-
         let temp = false
+        if (flaga) {
 
-        for (let y = 15; y >= 0; y--) {
-            for (let x = 7; x >= 0; x--) {
-                try {
-                    if (x == 0) {
-                        if (tab[y][x].value != 'none' && tab[y + 1][x].value == 'none' && tab[y][x].form.substring(0, 1) != "v") {
-                            tab[y + 1][x] = tab[y][x]
-                            tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
-                            temp = true
-                        }
-                    } else {
-                        if (tab[y][x].value != 'none' && tab[y + 1][x].value == 'none' && tab[y][x].lp != tab[y][x - 1].lp && tab[y][x].form.substring(0, 1) != "v") {
-                            tab[y + 1][x] = tab[y][x]
-                            tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
-                            temp = true
-                        } else if (tab[y][x].value != 'none' && tab[y + 1][x].value == 'none' && tab[y][x].lp == tab[y][x - 1].lp && tab[y + 1][x - 1] == 'none' && tab[y][x].form.substring(0, 1) != "v") {
-                            tab[y + 1][x] = tab[y][x]
-                            tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
-                            temp = true
-                        }
+            for (let y = 16; y >= 0; y--) {
+                for (let x = 7; x >= 0; x--) {
+                    if (tab[y][x].flag == "to_kill" && tab[y][x].form.substring(0, 1) == "v") {
+                        wynik = parseInt(wynik)
+                        wynik += 100
+                        tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
                     }
-                } catch (err) {
-
+                    else if (tab[y][x].flag == "to_kill") {
+                        tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
+                    }
                 }
             }
+
+
+            for (let y = 15; y >= 0; y--) {
+                for (let x = 7; x >= 0; x--) {
+                    try {
+                        if (x == 0) {
+                            if (tab[y][x].value != 'none' && tab[y + 1][x].value == 'none' && tab[y][x].form.substring(0, 1) != "v") {
+                                tab[y + 1][x] = tab[y][x]
+                                tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
+                                temp = true
+                            }
+                        } else {
+                            if (tab[y][x].value != 'none' && tab[y + 1][x].value == 'none' && tab[y][x].lp != tab[y][x - 1].lp && tab[y][x].form.substring(0, 1) != "v") {
+                                tab[y + 1][x] = tab[y][x]
+                                tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
+                                temp = true
+                            } else if (tab[y][x].value != 'none' && tab[y + 1][x].value == 'none' && tab[y][x].lp == tab[y][x - 1].lp && tab[y + 1][x - 1] == 'none' && tab[y][x].form.substring(0, 1) != "v") {
+                                tab[y + 1][x] = tab[y][x]
+                                tab[y][x] = { x: x, y: y, value: 'none', lp: 0, form: '', flag: '' }
+                                temp = true
+                            }
+                        }
+                    } catch (err) {
+
+                    }
+                }
+            }
+
         }
+
 
         let inside = '';
         let con1 = true;
@@ -920,13 +930,9 @@ function gra() {
         }
 
         if (!temp) {
+            zbijanie()
             clearInterval(grawitacja)
             grawitacja = false
-            zbijanie()
-            if (bezpiecznik == true) {
-                rzut = setInterval(dr, speed)
-                bezpiecznik = false
-            }
         }
 
     }
@@ -1116,12 +1122,18 @@ function gra() {
 
             if (klatka == 25) {
                 clearInterval(rzut)
+                clearInterval(rzut)
                 new_pill()
                 klatka = 0
                 bezpiecznik = true;
+                flaga = false;
             }
         } catch (err) {
-
+            clearInterval(rzut)
+            new_pill()
+            klatka = 0
+            bezpiecznik = true;
+            flaga = false;
         }
 
     }
