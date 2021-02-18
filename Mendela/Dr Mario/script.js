@@ -916,7 +916,7 @@ function gravity() {
 
 function virus() {
 
-    let ilosc = 10;
+    let ilosc = 5;
     let modulo = ilosc % 3
     let ilosc_petla = (ilosc - modulo) / 3
 
