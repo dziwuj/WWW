@@ -974,23 +974,23 @@ function gra() {
 
     }
 
-    var obrot1 = Math.PI;
-    var obrot2 = Math.PI + 2;
-    var obrot3 = Math.PI + 4;
+    var obroty1 = Math.PI;
+    var obroty2 = Math.PI + 2;
+    var obroty3 = Math.PI + 4;
 
     function krenci() {
-        document.getElementById("blue").style.top = 265 + Math.sin(obrot1) * 50 + "px";
-        document.getElementById("blue").style.left = 95 + Math.cos(obrot1) * 50 + "px";
+        document.getElementById("blue").style.top = 265 + Math.sin(obroty1) * 50 + "px";
+        document.getElementById("blue").style.left = 95 + Math.cos(obroty1) * 50 + "px";
 
-        document.getElementById("yellow").style.top = 265 + Math.sin(obrot2) * 50 + "px";
-        document.getElementById("yellow").style.left = 95 + Math.cos(obrot2) * 50 + "px";
+        document.getElementById("yellow").style.top = 265 + Math.sin(obroty2) * 50 + "px";
+        document.getElementById("yellow").style.left = 95 + Math.cos(obroty2) * 50 + "px";
 
-        document.getElementById("brown").style.top = 265 + Math.sin(obrot3) * 50 + "px";
-        document.getElementById("brown").style.left = 95 + Math.cos(obrot3) * 50 + "px";
+        document.getElementById("brown").style.top = 265 + Math.sin(obroty3) * 50 + "px";
+        document.getElementById("brown").style.left = 95 + Math.cos(obroty3) * 50 + "px";
 
-        obrot1 -= 0.5;
-        obrot2 -= 0.5;
-        obrot3 -= 0.5;
+        obroty1 -= 0.5;
+        obroty2 -= 0.5;
+        obroty3 -= 0.5;
     };
 
     let korba = setInterval(krenci, 1800);
