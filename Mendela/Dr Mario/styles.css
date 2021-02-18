@@ -1,0 +1,131 @@
+body {
+  margin: 0px;
+  background: url(./gfx/pf.png);
+  background-repeat: no-repeat;
+}
+
+.pusty {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+
+#plansza {
+  position: absolute;
+  top: 78px;
+  left: 255px;
+}
+
+#lupka img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+#message {
+  position: absolute;
+  width: 334px;
+  height: 119px;
+}
+
+#virus {
+  background-color: black;
+  position: absolute;
+  top: 330px;
+  left: 560px;
+  width: 50px;
+  height: 30px;
+}
+
+#virus img {
+  margin: 0px;
+  width: 18px;
+  height: 18px;
+}
+
+#score {
+  background-color: black;
+  position: absolute;
+  top: 126px;
+  left: 50px;
+  width: 150px;
+  height: 30px;
+}
+
+#score img {
+  margin-top: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+#topscore {
+  background-color: black;
+  position: absolute;
+  top: 78px;
+  left: 50px;
+  width: 150px;
+  height: 25px;
+}
+
+#topscore img {
+  margin-top: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+#doc {
+  position: absolute;
+  top: 40px;
+  left: 472px;
+  width: 125px;
+  height: 125px;
+  background-position: center;
+  background-size: cover;
+}
+
+#doc #h1 {
+  position: absolute;
+  top: 27px;
+  left: 22px;
+}
+
+#doc #h2 {
+  position: absolute;
+  top: 42px;
+  left: 22px;
+}
+
+#doc #h3 {
+  position: absolute;
+  top: 57px;
+  left: 22px;
+}
+
+#doc #h4 {
+  position: absolute;
+  top: 57px;
+  left: 22px;
+}
+
+#doc #pill {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  height: 18px;
+  width: 36px;
+}
+
+#doc #pl {
+  position: absolute;
+}
+
+#doc #pr {
+  position: absolute;
+  left: 18px;
+}
+
+#doc img {
+  width: 18px;
+  height: 18px;
+}
+/*# sourceMappingURL=styles.css.map */
